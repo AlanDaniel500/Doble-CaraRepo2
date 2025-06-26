@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05efaefccb6b27f408226278642e4d26, type: 3}
+  m_Name: Light Card 4
+  m_EditorClassIdentifier: 
+  cardName: 
+  cardImage: {fileID: -4741807140174027863, guid: 8daff6b01f7e2384c9fbaf9b8dd479d5, type: 3}
+  cardType: 0
+  cardNumber: 4
+  damage: 4
