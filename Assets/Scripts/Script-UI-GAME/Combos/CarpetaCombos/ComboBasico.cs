@@ -7,6 +7,8 @@ public class ComboBasico : MonoBehaviour, ICombo
     public string Nombre => "Básico";
     public int Prioridad => 1;
 
+    [SerializeField] private int dañoBase = 0; // Nuevo campo editable desde el Inspector
+
     public bool CheckCombo(List<CardData> cartas)
     {
         return cartas != null && cartas.Count > 0;
@@ -15,10 +17,10 @@ public class ComboBasico : MonoBehaviour, ICombo
     public int CalcularDaño(List<CardData> cartas)
     {
         CardData cartaMayor = ObtenerCartaDeMayorValor(cartas);
-        return cartaMayor != null ? cartaMayor.cardNumber : 0;
+        int dañoCarta = cartaMayor != null ? cartaMayor.cardNumber : 0;
+        return dañoBase + dañoCarta; // Suma del daño base + valor de la carta mayor
     }
 
-    // Cambiado de private a public para que pueda ser usado externamente
     public CardData ObtenerCartaDeMayorValor(List<CardData> cartas)
     {
         if (cartas == null || cartas.Count == 0) return null;
@@ -32,4 +34,3 @@ public class ComboBasico : MonoBehaviour, ICombo
         return cartaMayor;
     }
 }
-

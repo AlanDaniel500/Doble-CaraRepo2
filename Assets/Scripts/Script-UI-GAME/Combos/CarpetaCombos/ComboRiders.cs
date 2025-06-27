@@ -7,6 +7,8 @@ public class ComboRiders : MonoBehaviour, ICombo
     public string Nombre => "Riders";
     public int Prioridad => 4;
 
+    [SerializeField] private int dañoBase = 0; // Daño base configurable en el inspector
+
     public bool CheckCombo(List<CardData> cartas)
     {
         if (cartas == null || cartas.Count < 4) return false;
@@ -62,6 +64,6 @@ public class ComboRiders : MonoBehaviour, ICombo
             }
         }
 
-        return maxDanio;
+        return dañoBase + maxDanio; // Se suma el daño base configurado
     }
 }

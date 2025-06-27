@@ -7,6 +7,8 @@ public class ComboCerbero : MonoBehaviour, ICombo
     public string Nombre => "Cerbero";
     public int Prioridad => 3;
 
+    [SerializeField] private int dañoBase = 0; // Nuevo campo para configurar desde el inspector
+
     public bool CheckCombo(List<CardData> cartas)
     {
         if (cartas == null || cartas.Count < 3) return false;
@@ -62,6 +64,6 @@ public class ComboCerbero : MonoBehaviour, ICombo
             }
         }
 
-        return maxDanio;
+        return dañoBase + maxDanio; // Suma del daño base más el daño por las cartas
     }
 }
