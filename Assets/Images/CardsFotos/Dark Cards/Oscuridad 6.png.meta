@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bec66d2a33509024b96ccd50c8eb2ba8
+guid: 78c21ba9e3f98434f933dc5d5d3c95ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 896575557538373827
-    second: Oscuridad 4_0
+      213: -215909793137644544
+    second: Oscuridad 6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Oscuridad 4_0
+      name: Oscuridad 6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c06f5528b6417c00800000000000000
-      internalID: 896575557538373827
+      spriteID: 00ca084ef2fe00df0800000000000000
+      internalID: -215909793137644544
       vertices: []
       indices: 
       edges: []
