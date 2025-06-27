@@ -8,11 +8,22 @@ public class CardSelector : MonoBehaviour
 
     // Contador estático para todas las cartas
     private static int cartasLevantadas = 0;
-    private static int maxCartasLevantadas = 4;
+
+    // Límite editable desde el Inspector (por ejemplo 8)
+    [SerializeField] private int maxCartasPermitidas = 8;
+
+    // Necesitamos guardar una copia del límite para accederlo de forma estática
+    private static int maxCartasLevantadas;
 
     private void Start()
     {
         originalPosition = transform.position;
+
+        // Inicializamos el valor estático en el primer Start
+        if (maxCartasLevantadas == 0)
+        {
+            maxCartasLevantadas = maxCartasPermitidas;
+        }
     }
 
     private void OnMouseDown()
@@ -28,7 +39,7 @@ public class CardSelector : MonoBehaviour
             }
             else
             {
-                Debug.Log("Ya hay 4 cartas levantadas. Baja alguna antes de levantar otra.");
+                Debug.Log($"Ya hay {maxCartasLevantadas} cartas levantadas. Baja alguna antes de levantar otra.");
             }
         }
         else

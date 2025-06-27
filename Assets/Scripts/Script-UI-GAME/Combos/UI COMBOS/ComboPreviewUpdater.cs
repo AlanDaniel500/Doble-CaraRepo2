@@ -22,7 +22,7 @@ public class ComboPreviewUpdater : MonoBehaviour
             return;
         }
 
-        // Si no cambió la selección, no actualizamos nada
+        // Evitar actualizar si no hubo cambios
         if (cartasActuales.Count == cartasPrevias.Count)
         {
             bool iguales = true;
@@ -40,13 +40,7 @@ public class ComboPreviewUpdater : MonoBehaviour
 
         cartasPrevias = new List<CardData>(cartasActuales);
 
-        if (cartasActuales.Count == 1)
-        {
-            // Mostrar daño individual
-            var carta = cartasActuales[0];
-            comboUIManager.MostrarCombo($"Carta: {carta.cardName}", carta.damage);
-        }
-        else if (cartasActuales.Count > 1)
+        if (cartasActuales.Count >= 1)
         {
             ICombo mejorCombo = managerCombos.RevisarMejorCombo(cartasActuales);
             if (mejorCombo != null)
@@ -65,4 +59,3 @@ public class ComboPreviewUpdater : MonoBehaviour
         }
     }
 }
-

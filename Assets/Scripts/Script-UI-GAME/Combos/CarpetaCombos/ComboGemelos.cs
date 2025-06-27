@@ -5,7 +5,10 @@ using CardSystem;
 public class ComboGemelos : MonoBehaviour, ICombo
 {
     public string Nombre => "Gemelos";
-    public int Prioridad => 2;
+    
+    [SerializeField] private int prioridad = 2; // Editable desde inspector
+    public int Prioridad => prioridad;
+
 
     [SerializeField] private int dañoBase = 0; // Nuevo campo configurable desde el Inspector
 
