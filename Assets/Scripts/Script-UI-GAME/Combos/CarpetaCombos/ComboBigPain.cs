@@ -2,10 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using CardSystem;
 
-public class ComboBigPain : MonoBehaviour, ICombo
+public class ComboBigPain : MonoBehaviour, ICombo, IComboConEfecto
 {
     public string Nombre => "Gran Dolor";
-    public int Prioridad => 5; // Puede ser mayor que los otros si quer�s que tenga m�s peso
+
+    [SerializeField] private int prioridad = 6; // Editable desde el inspector
+    public int Prioridad => prioridad;
+
+    [SerializeField] private int dañoBase = 75;
+
+    private int ultimoDañoCalculado; // Para usarlo en AplicarEfecto
 
     public bool CheckCombo(List<CardData> cartas)
     {
@@ -20,10 +26,34 @@ public class ComboBigPain : MonoBehaviour, ICombo
         return sangreCount >= 4;
     }
 
-    public int CalcularDa�o(List<CardData> cartas)
+    public int CalcularDaño(List<CardData> cartas)
     {
-        Debug.Log("Combo Gran Dolor activado ? 75 de da�o");
-        return 75;
+        int sumaValores = 0;
+
+        foreach (var carta in cartas)
+        {
+            sumaValores += carta.cardNumber;
+        }
+
+        int totalDaño = dañoBase + sumaValores;
+        ultimoDañoCalculado = totalDaño; // Lo guardamos para usarlo luego en el efecto
+
+        Debug.Log($"Combo Gran Dolor activado 🩸 Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
+
+        return totalDaño;
+    }
+
+    // Cambié para recibir Player como parámetro
+    public void AplicarEfecto(List<CardData> cartas, Player player)
+    {
+        if (player != null)
+        {
+            player.Curar(ultimoDañoCalculado);
+            Debug.Log($"Robo de vida: se curó {ultimoDañoCalculado} puntos 💉");
+        }
+        else
+        {
+            Debug.LogWarning("Player es null en AplicarEfecto de ComboBigPain");
+        }
     }
 }
-

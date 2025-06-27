@@ -31,17 +31,16 @@ public class ComboButtonTester : MonoBehaviour
             return;
         }
 
-        ICombo comboActivo = managerCombos.RevisarMejorCombo(cartasSeleccionadas);
-        if (comboActivo == null)
+        int dañoAplicado = managerCombos.EjecutarCombo(cartasSeleccionadas);
+
+        if (dañoAplicado == 0)
         {
             Debug.LogWarning("No se encontró ningún combo válido");
             return;
         }
 
-        int dañoAplicado = comboActivo.CalcularDaño(cartasSeleccionadas);
-        Debug.Log($"Combo detectado: {comboActivo.Nombre}, daño: {dañoAplicado}");
+        ICombo comboActivo = managerCombos.RevisarMejorCombo(cartasSeleccionadas);
 
-     
         comboUIManager.MostrarCombo(comboActivo.Nombre, dañoAplicado);
 
         enemigo.AplicarDanoDesdeCombo(dañoAplicado);

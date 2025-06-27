@@ -2,27 +2,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using CardSystem;
 
-public class ComboPandemonium : MonoBehaviour, ICombo
+public class ComboDefensaInquebrantable : MonoBehaviour, ICombo
 {
-    public string Nombre => "Pandemonio";
+    public string Nombre => "Defensa Inquebrantable";
     
     [SerializeField] private int prioridad = 6; // Editable desde inspector
     public int Prioridad => prioridad;
 
 
-    [SerializeField] private int dañoBase = 100; // Editable desde el editor
+    [SerializeField] private int dañoBase = 150; // Editable desde el editor
 
     public bool CheckCombo(List<CardData> cartas)
     {
-        int muerteCount = 0;
+        int luzCount = 0;
 
         foreach (var carta in cartas)
         {
-            if (carta.cardType == CardData.CardType.Muerte)
-                muerteCount++;
+            if (carta.cardType == CardData.CardType.Luz)
+                luzCount++;
         }
 
-        return muerteCount >= 4;
+        return luzCount >= 4;
     }
 
     public int CalcularDaño(List<CardData> cartas)
@@ -35,10 +35,8 @@ public class ComboPandemonium : MonoBehaviour, ICombo
         }
 
         int totalDaño = dañoBase + sumaValores;
-
-        Debug.Log($"Combo Pandemonio activado ☠️ Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
+        Debug.Log($"Combo Defensa Inquebrantable activado ⚡ Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
 
         return totalDaño;
     }
 }
-

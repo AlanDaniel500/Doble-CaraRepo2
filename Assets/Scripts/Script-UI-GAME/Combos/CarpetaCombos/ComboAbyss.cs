@@ -5,7 +5,12 @@ using CardSystem;
 public class ComboAbyss : MonoBehaviour, ICombo
 {
     public string Nombre => "Abismo";
-    public int Prioridad => 6;
+    
+    [SerializeField] private int prioridad = 6; // Editable desde inspector
+    public int Prioridad => prioridad;
+
+
+    [SerializeField] private int dañoBase = 250; // Editable desde el inspector
 
     public bool CheckCombo(List<CardData> cartas)
     {
@@ -20,10 +25,20 @@ public class ComboAbyss : MonoBehaviour, ICombo
         return oscuridadCount >= 4;
     }
 
-    public int CalcularDa�o(List<CardData> cartas)
+    public int CalcularDaño(List<CardData> cartas)
     {
-        Debug.Log("Combo Abismo activado ? 250 de da�o");
-        return 250;
+        int sumaValores = 0;
+
+        foreach (var carta in cartas)
+        {
+            sumaValores += carta.cardNumber;
+        }
+
+        int totalDaño = dañoBase + sumaValores;
+
+        Debug.Log($"Combo Abismo activado 🌑 Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
+
+        return totalDaño;
     }
 }
 

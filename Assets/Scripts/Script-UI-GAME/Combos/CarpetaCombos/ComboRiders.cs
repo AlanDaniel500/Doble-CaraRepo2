@@ -5,7 +5,12 @@ using CardSystem;
 public class ComboRiders : MonoBehaviour, ICombo
 {
     public string Nombre => "Riders";
-    public int Prioridad => 4;
+    
+    [SerializeField] private int prioridad = 4; // Editable desde inspector
+    public int Prioridad => prioridad;
+
+
+    [SerializeField] private int dañoBase = 0; // Daño base configurable en el inspector
 
     public bool CheckCombo(List<CardData> cartas)
     {
@@ -62,6 +67,6 @@ public class ComboRiders : MonoBehaviour, ICombo
             }
         }
 
-        return maxDanio;
+        return dañoBase + maxDanio; // Se suma el daño base configurado
     }
 }

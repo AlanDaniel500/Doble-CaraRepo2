@@ -5,7 +5,12 @@ using CardSystem;
 public class ComboGemelos : MonoBehaviour, ICombo
 {
     public string Nombre => "Gemelos";
-    public int Prioridad => 2;
+    
+    [SerializeField] private int prioridad = 2; // Editable desde inspector
+    public int Prioridad => prioridad;
+
+
+    [SerializeField] private int dañoBase = 0; // Nuevo campo configurable desde el Inspector
 
     public bool CheckCombo(List<CardData> cartas)
     {
@@ -21,7 +26,7 @@ public class ComboGemelos : MonoBehaviour, ICombo
             conteo[carta.cardNumber]++;
         }
 
-        // Verificar que haya al menos un par (exactamente 2 o más)
+        // Verificar que haya al menos un par
         foreach (var cantidad in conteo.Values)
         {
             if (cantidad >= 2)
@@ -45,20 +50,18 @@ public class ComboGemelos : MonoBehaviour, ICombo
             cartasPorNumero[carta.cardNumber].Add(carta);
         }
 
-        // Buscar el par con mayor suma posible (aunque para Gemelos solo hace falta uno)
         int dañoMaximo = 0;
 
         foreach (var grupo in cartasPorNumero.Values)
         {
             if (grupo.Count >= 2)
             {
-                // Sumar sólo las dos primeras cartas iguales (por ejemplo dos 6 = 12)
                 int sumaPar = grupo[0].cardNumber + grupo[1].cardNumber;
                 if (sumaPar > dañoMaximo)
                     dañoMaximo = sumaPar;
             }
         }
 
-        return dañoMaximo;
+        return dañoBase + dañoMaximo; // Suma del daño base + valor del par más fuerte
     }
 }
