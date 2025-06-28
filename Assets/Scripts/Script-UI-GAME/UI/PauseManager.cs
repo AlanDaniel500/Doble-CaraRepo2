@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup gameCanvasGroup;
-
     [Header("Paneles")]
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject audioPanel;
@@ -22,12 +20,6 @@ public class PauseManager : MonoBehaviour
     {
         if (pausePanel != null)
             pausePanel.SetActive(true);
-
-        gameCanvasGroup.interactable = false;
-        gameCanvasGroup.blocksRaycasts = false;
-        gameCanvasGroup.alpha = 1f;
-
-        Time.timeScale = 0f;
     }
 
     public void OnExitGame()
@@ -40,7 +32,8 @@ public class PauseManager : MonoBehaviour
         if (audioPanel != null)
         {
             audioPanel.SetActive(true);
-            pausePanel.SetActive(false);
+            if (pausePanel != null)
+                pausePanel.SetActive(false);
         }
     }
 
@@ -49,7 +42,8 @@ public class PauseManager : MonoBehaviour
         if (cardsInfoPanel != null)
         {
             cardsInfoPanel.SetActive(true);
-            pausePanel.SetActive(false);
+            if (pausePanel != null)
+                pausePanel.SetActive(false);
         }
 
         if (exitCardsInfoManager != null)
@@ -80,11 +74,5 @@ public class PauseManager : MonoBehaviour
     {
         if (pausePanel != null)
             pausePanel.SetActive(false);
-
-        gameCanvasGroup.interactable = true;
-        gameCanvasGroup.blocksRaycasts = true;
-        gameCanvasGroup.alpha = 1f;
-
-        Time.timeScale = 1f;
     }
 }
