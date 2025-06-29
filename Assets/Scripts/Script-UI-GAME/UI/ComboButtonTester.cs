@@ -4,15 +4,14 @@ using CardSystem;
 
 public class ComboButtonTester : MonoBehaviour
 {
-    [SerializeField] private EnemyTurnCounter enemyTurnCounter;
     [SerializeField] private CardSpawner cardSpawner;
     [SerializeField] private ManagerCombos managerCombos;
-    [SerializeField] private RecibeDanoEnemigo enemigo;
+    [SerializeField] private EnemyController enemyController; // Ahora manejamos todo acá
     [SerializeField] private ComboUIManager comboUIManager;
 
     public void OnComboPressed()
     {
-        if (cardSpawner == null || managerCombos == null || enemigo == null || comboUIManager == null)
+        if (cardSpawner == null || managerCombos == null || enemyController == null || comboUIManager == null)
         {
             Debug.LogError("Faltan referencias necesarias en ComboButtonTester");
             return;
@@ -43,11 +42,13 @@ public class ComboButtonTester : MonoBehaviour
 
         comboUIManager.MostrarCombo(comboActivo.Nombre, dañoAplicado);
 
-        enemigo.AplicarDanoDesdeCombo(dañoAplicado);
+        // Aplicar daño usando EnemyController
+        enemyController.AplicarDanoDesdeCombo(dañoAplicado);
 
         cardSpawner.EliminarCartasSeleccionadas();
         CardSelector.ReiniciarContador();
 
-        enemyTurnCounter.OnPlayerTurnEnd();
+        // Ahora le avisamos directamente al EnemyController que terminó el turno del jugador
+        enemyController.OnPlayerTurnEnd();
     }
 }

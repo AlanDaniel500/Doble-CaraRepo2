@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 237118238}
   - component: {fileID: 237118239}
   - component: {fileID: 237118240}
+  - component: {fileID: 237118241}
   m_Layer: 0
   m_Name: ConditionWinLoss
   m_TagString: Untagged
@@ -517,8 +518,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237118236}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 561.15216, y: 355.8993, z: -9.472014}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 485.2195, y: 287.19662, z: -1313.1879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -549,7 +550,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1892b8755384e084bb69d4e5823bd355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigo: {fileID: 1980940939}
+  enemyController: {fileID: 1980298667}
+--- !u!114 &237118241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237118236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f74d8b0f2e7c2e47ac592a3c6479cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  niveles:
+  - {fileID: 11400000, guid: 205c5c29c80735e4eaf0f5f23bb18140, type: 2}
+  - {fileID: 11400000, guid: 5384f1a8551468149ad352c575363c6e, type: 2}
+  - {fileID: 11400000, guid: 1738d774c9b1ea74e888c0669bec2232, type: 2}
+  - {fileID: 11400000, guid: d59c22bd358e9ed478065b1558056fdc, type: 2}
+  - {fileID: 11400000, guid: 5c308226d9d98484c93d111ca48173a4, type: 2}
+  enemy: {fileID: 1980298667}
 --- !u!1 &252759319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,7 +2782,17 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: textoTurnos
+      value: 
+      objectReference: {fileID: 1293828957}
+    - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: delayDespuesDeAtacar
+      value: 0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 841492494331045466, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+    - {fileID: 5650192491237601234, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3994,10 +4024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19c9c70cda88e047b8e8bd6012604c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTurnCounter: {fileID: 1794316873}
   cardSpawner: {fileID: 1150047245}
   managerCombos: {fileID: 1681072556}
-  enemigo: {fileID: 1980940939}
+  enemyController: {fileID: 1980298667}
   comboUIManager: {fileID: 134886635}
 --- !u!4 &1091400805
 Transform:
@@ -5110,6 +5139,50 @@ MonoBehaviour:
   cardsInfoPanel: {fileID: 1605916393}
   menuPausaPanel: {fileID: 1980469110}
   gameCanvasGroup: {fileID: 1540976314}
+--- !u!1 &1469502495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469502497}
+  - component: {fileID: 1469502496}
+  m_Layer: 0
+  m_Name: TesteoNivelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1469502496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469502495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cb4488dbca29840bc24e6d94dff6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1469502497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469502495}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 485.2195, y: 287.19662, z: -5.7307544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1470710917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6609,7 +6682,6 @@ GameObject:
   - component: {fileID: 1794316870}
   - component: {fileID: 1794316872}
   - component: {fileID: 1794316871}
-  - component: {fileID: 1794316873}
   m_Layer: 5
   m_Name: EnemyTurnCounter
   m_TagString: Untagged
@@ -6675,22 +6747,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794316869}
   m_CullTransparentMesh: 1
---- !u!114 &1794316873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794316869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ec7ae26a83cad4cbdafa9d6106df4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnText: {fileID: 1293828957}
-  maxTurns: 2
-  delayAntesDeAtacar: 1
-  delayDespuesDeAtacar: 0.7
 --- !u!1 &1821136059
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,6 +7530,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1980298667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+  m_PrefabInstance: {fileID: 751852905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e38ceab5abb0a479da5dc952f5388b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1980469110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7567,17 +7634,6 @@ MonoBehaviour:
   Master_Slider: {fileID: 1972728037}
   Music_Slider: {fileID: 1642148312}
   SFX_Slider: {fileID: 1792472747}
---- !u!114 &1980940939 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 841492494331045466, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
-  m_PrefabInstance: {fileID: 751852905}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5196b32e7198944b4eb057913518bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1988730592
 GameObject:
   m_ObjectHideFlags: 0
@@ -8475,3 +8531,4 @@ SceneRoots:
   - {fileID: 1150047246}
   - {fileID: 237118238}
   - {fileID: 1681072557}
+  - {fileID: 1469502497}
