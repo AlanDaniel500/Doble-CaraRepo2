@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e10392875377e34eb6ee84c7222f6fc
+guid: 68f72f9319948994aa9b10818decb5dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4249544449579324240
-    second: SangreModificada3_0
+      213: 6933618681683363378
+    second: escenario_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SangreModificada3_0
+      name: escenario_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 336
-        height: 512
+        width: 1299
+        height: 735
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 053986e692a69fa30800000000000000
-      internalID: 4249544449579324240
+      spriteID: 236cfb18479293060800000000000000
+      internalID: 6933618681683363378
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SangreModificada3_0: 4249544449579324240
+      escenario_0: 6933618681683363378
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

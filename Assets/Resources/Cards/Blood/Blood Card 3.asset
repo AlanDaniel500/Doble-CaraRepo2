@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blood Card 3
   m_EditorClassIdentifier: 
   cardName: 
-  cardImage: {fileID: 4249544449579324240, guid: 4e10392875377e34eb6ee84c7222f6fc, type: 3}
+  cardImage: {fileID: 6173358302704025757, guid: aeafbc09c12a32643910e6b8558e2909, type: 3}
   cardType: 3
   cardNumber: 3
   damage: 3
