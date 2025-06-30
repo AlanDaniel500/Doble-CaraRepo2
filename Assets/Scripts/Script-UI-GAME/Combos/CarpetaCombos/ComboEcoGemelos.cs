@@ -6,7 +6,7 @@ public class ComboEcoGemelo : MonoBehaviour, ICombo
 {
     public string Nombre => "Eco Gemelo";
 
-    [SerializeField] private int prioridad = 4;
+    [SerializeField] private int prioridad = 6;
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 50;

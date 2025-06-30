@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Gano : MonoBehaviour
 {
-    [SerializeField] private RecibeDanoEnemigo enemigo;
+    [SerializeField] private EnemyController enemyController;  // Cambiado aquí
 
     private void Update()
     {
-        if (enemigo != null && enemigo.VidaActual <= 0)
+        if (enemyController != null && enemyController.VidaActual <= 0)
         {
             PlayerPrefs.SetInt("GameResult", 1); // Guardamos victoria
             PlayerPrefs.Save();

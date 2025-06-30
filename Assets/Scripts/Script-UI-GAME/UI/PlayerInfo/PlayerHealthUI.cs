@@ -10,24 +10,49 @@ public class PlayerHealthUI : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI healthText;
 
-    // Propiedad pública para que otros scripts puedan leer la vida actual
+    // Referencia al enemigo
+    private EnemyController enemyController;
+
+    // Propiedad pública para acceder a la vida actual del jugador
     public int CurrentHealth => currentHealth;
 
     void Start()
     {
         UpdateHealthUI();
+
+        // Buscar al primer EnemyController en escena
+        enemyController = FindFirstObjectByType<EnemyController>();
+
+        if (enemyController == null)
+        {
+            Debug.LogWarning("EnemyController no encontrado en la escena.");
+        }
     }
 
     void Update()
     {
-        // Testeo con teclas
+        // Testeo: daño al jugador
         if (Input.GetKeyDown(KeyCode.K))
         {
             TakeDamage(100);
         }
+        // Testeo: curación del jugador
         else if (Input.GetKeyDown(KeyCode.L))
         {
             Heal(100);
+        }
+        // Testeo: daño al enemigo
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (enemyController != null)
+            {
+                enemyController.AplicarDanoDesdeCombo(100);
+                Debug.Log("Daño aplicado al enemigo con la tecla I.");
+            }
+            else
+            {
+                Debug.LogWarning("No se puede dañar al enemigo. EnemyController no asignado.");
+            }
         }
     }
 

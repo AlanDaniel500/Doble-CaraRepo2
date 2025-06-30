@@ -14,7 +14,7 @@ public class UIController : MonoBehaviour
             AudioManager.Instance.SetMasterVolume(masterVol);
         }
 
-        // Ya tenías esto:
+        // Ya tenï¿½as esto:
         if (Music_Slider != null)
         {
             float musicVol = PlayerPrefs.GetFloat("MusicVolume", 1f);

@@ -22,7 +22,6 @@ public class UpgradeManager : MonoBehaviour
 
     void Start()
     {
-        // Inicializar botones
         charmButtons = new Button[] { botonOpcion1, botonOpcion2, botonOpcion3 };
 
         confirmButton.gameObject.SetActive(false);
@@ -64,6 +63,19 @@ public class UpgradeManager : MonoBehaviour
     void OnConfirm()
     {
         Debug.Log("Confirmado: charm " + selectedCharmIndex);
+
+        // Subir nivel directamente acá usando PlayerPrefs
+        int nivelActual = PlayerPrefs.GetInt("NivelJugador", 1);
+        nivelActual++;
+        PlayerPrefs.SetInt("NivelJugador", nivelActual);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Nivel subido a: {nivelActual}");
+
+        // Guardar también el charm seleccionado si lo necesitás después
+        PlayerPrefs.SetInt("CharmSeleccionado", selectedCharmIndex);
+        PlayerPrefs.Save();
+
         SceneManager.LoadScene("GAME");
     }
 }
