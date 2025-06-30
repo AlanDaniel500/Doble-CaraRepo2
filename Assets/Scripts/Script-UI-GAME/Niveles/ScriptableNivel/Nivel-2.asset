@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa76e9659287c84a879c642bce22fa4, type: 3}
   m_Name: Nivel-2
   m_EditorClassIdentifier: 
-  nivelID: 1
+  nivelID: 2
   vidaEnemigo: 600
   "da\xF1oEnemigo": 60
   turnosParaAtacar: 3
-  imagenEnemigo: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  spriteEnemigo: {fileID: 0}

@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int vidaMaxima = 100;
     [SerializeField] private int daño = 100;
     [SerializeField] private int turnosParaAtacar = 3;
-    private int vidaActual;
+    private int vidaActual = 0;
     private int turnosRestantes;
 
     [Header("UI")]
@@ -24,14 +24,16 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float delayDespuesDeAtacar = 1f;
 
     private PlayerHealthUI playerHealthUI;
+    private bool estaActivo = false;
 
     private void Start()
     {
         playerHealthUI = FindFirstObjectByType<PlayerHealthUI>();
 
-        // IMPORTANTE: No inicializamos stats aquí. Esperamos que LevelManager los aplique con SetStats().
-        // Solo actualizamos UI si los valores ya fueron seteados antes de que Start() se llame.
 
+        Debug.Log($"[ENEMY START] vidaMaxima={vidaMaxima}, vidaActual={vidaActual}");
+        
+        // No hacemos nada más. Esperamos a SetStats para activar al enemigo.
         ActualizarTextoVida();
         ActualizarTextoDaño();
         ActualizarTextoTurnos();
@@ -48,13 +50,19 @@ public class EnemyController : MonoBehaviour
         if (spriteRenderer != null && nuevoSprite != null)
             spriteRenderer.sprite = nuevoSprite;
 
+        Debug.Log($"[ENEMY SetStats] vidaMaxima={vidaMaxima}, vidaActual={vidaActual}");
+
         ActualizarTextoVida();
         ActualizarTextoDaño();
         ActualizarTextoTurnos();
+
+        estaActivo = true; // Activamos al enemigo una vez configurado
     }
 
     public void OnPlayerTurnEnd()
     {
+        if (!estaActivo) return;
+
         turnosRestantes--;
 
         if (turnosRestantes <= 0)
@@ -89,6 +97,8 @@ public class EnemyController : MonoBehaviour
 
     public void EjecutarAtaque()
     {
+        if (!estaActivo) return;
+
         Debug.Log("¡El enemigo ataca!");
 
         if (playerHealthUI != null)
@@ -106,6 +116,8 @@ public class EnemyController : MonoBehaviour
 
     public void AplicarDanoDesdeCombo(int cantidad)
     {
+        if (!estaActivo) return;
+
         vidaActual -= cantidad;
         if (vidaActual < 0) vidaActual = 0;
 
@@ -115,7 +127,7 @@ public class EnemyController : MonoBehaviour
         if (vidaActual == 0)
         {
             Debug.Log("¡El enemigo ha sido derrotado!");
-            // Aquí podés agregar lógica extra al morir
+            // Lógica de victoria o muerte del enemigo va aquí
         }
     }
 
