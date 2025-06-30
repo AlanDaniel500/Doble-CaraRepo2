@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04195bf8f4979ea44bc1d6788e59e6b1, type: 3}
-  m_Name: ComboRidersPage2
+  m_Name: ComboGemelosPag2
   m_EditorClassIdentifier: 
-  titulo: Combo Basico
-  descripcion: "Combina 1 carta y hace el da\xF1o de la carta mas su da\xF1o base"
-  imagen: {fileID: -6417750817691229390, guid: 625efae2eaa68d4408a9599115c2ad11, type: 3}
-  "da\xF1o": 10
-  efectoExtra: 
+  titulo: Gran Dolor
+  descripcion: Combina 4 cartas de sangre
+  imagen: {fileID: 8157957364096771475, guid: bdd71b7ea7fecf244ab00e77fb03c55a, type: 3}
+  "da\xF1o": 75
+  efectoExtra: "Te curas por la cantidad de da\xF1o que infligiste"
