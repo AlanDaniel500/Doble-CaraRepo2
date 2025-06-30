@@ -5079,7 +5079,7 @@ Transform:
   m_GameObject: {fileID: 1369681080}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.006, y: -0.044, z: -0.5}
+  m_LocalPosition: {x: -1.006, y: -0.044, z: 0.97}
   m_LocalScale: {x: 3.0167682, y: 3.029229, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8981,10 +8981,7 @@ SceneRoots:
   - {fileID: 1150047246}
   - {fileID: 237118238}
   - {fileID: 1681072557}
- Sistema-de-combos
-  - {fileID: 1469502497}
   - {fileID: 142503353}
   - {fileID: 711008617}
-
   - {fileID: 1369681082}
- main
+  - {fileID: 1469502497}
