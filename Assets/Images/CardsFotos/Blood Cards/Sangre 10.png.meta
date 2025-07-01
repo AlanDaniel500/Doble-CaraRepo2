@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c313036395a8c634ebb444686152eed2
+guid: 18b034e187d49eb4283ff05661404d1a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1879987650202548574
-    second: SangreModificada10_0
+      213: -5432285492611901703
+    second: Sangre 10_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SangreModificada10_0
+      name: Sangre 10_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a64e875131f8e5e0800000000000000
-      internalID: -1879987650202548574
+      spriteID: 9f61c5e3025ac94b0800000000000000
+      internalID: -5432285492611901703
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SangreModificada10_0: -1879987650202548574
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
