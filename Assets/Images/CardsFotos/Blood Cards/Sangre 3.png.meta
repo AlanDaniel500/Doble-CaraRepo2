@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sangre 3_0: 6173358302704025757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
