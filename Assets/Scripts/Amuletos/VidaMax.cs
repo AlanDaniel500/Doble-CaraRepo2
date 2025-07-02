@@ -1,25 +1,19 @@
-using System;
 using UnityEngine;
 
-
-
-[CreateAssetMenu(menuName ="Amuleto/VidaMaxima")]
-public class VidaMax : AmuletoBase
+/*[CreateAssetMenu(menuName = "Amulet/MaxHealthAmulet")]
+public class MaxHealthAmulet : AmuletBase
 {
-    public int MaxLife = 100;
+    public int extraMaxHealth = 100;
 
-
-    public override void AplicarEfecto(StatsPlayer player)
+    public override void ApplyEffect(PlayerStats player)
     {
-        player.maxhealth += MaxLife;
-        player.currenthealth += MaxLife;
-
+        player.maxHealth += extraMaxHealth;
+        player.currentHealth += extraMaxHealth;
     }
 
-
-    public override void RemoverObjeto(StatsPlayer player)
+    public override void RemoveEffect(PlayerStats player)
     {
-        player.maxhealth -= MaxLife;
-        player.currenthealth = Mathf.Min(player.currenthealth,player.maxhealth);
+        player.maxHealth -= extraMaxHealth;
+        player.currentHealth = Mathf.Min(player.currentHealth, player.maxHealth);
     }
-}
+}*/

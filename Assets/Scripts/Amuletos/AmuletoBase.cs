@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public abstract class AmuletoBase : ScriptableObject
+public abstract class AmuletBase : ScriptableObject
 {
-    public string Name;
-    public Sprite Icono;
+    /*public string amuletName;
+    public Sprite icon;
 
-
-    public abstract void AplicarEfecto(StatsPlayer player);
-
-
-    public virtual void RemoverObjeto(StatsPlayer player)
-    {
-
-    }
+    public abstract void ApplyEffect(PlayerStats player);
+    public virtual void RemoveEffect(PlayerStats player) { }*/
 }

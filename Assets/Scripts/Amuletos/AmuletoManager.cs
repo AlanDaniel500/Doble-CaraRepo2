@@ -2,61 +2,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AmuletoManager : MonoBehaviour
+public class AmuletManager : MonoBehaviour
 {
-   public List<AmuletoBase> AmuletosEquipados = new List<AmuletoBase>();
+    /*public List<AmuletBase> equippedAmulets = new List<AmuletBase>();
+    private PlayerStats stats;
 
-    private StatsPlayer stats;
+    public Transform availablePanel;
+    public Transform equippedPanel;
+    public GameObject equippedButtonPrefab;
+    public List<AmuletBase> allAmulets;
 
-
-    public Transform panelDisponible;
-    public Transform panelEquipados;
-    public GameObject panelEquipadosPrefab;
-    public List<AmuletoBase> todoslosAmuletos;
-
-    private AmuletoManager amuletoManager;
-
+    private AmuletManager amuletManager;
 
     private void Start()
     {
-       stats=GetComponent<StatsPlayer>();
-        amuletoManager = FindObjectOfType<AmuletoManager>();
-        MostrarAmuletosEquipados();
-        
-        
+        stats = GetComponent<PlayerStats>();
+        amuletManager = FindFirstObjectByType<AmuletManager>();
+        ShowEquippedAmulets();
     }
 
-
-    public void EquiparAmuleto(AmuletoBase amuleto)
+    public void EquipAmulet(AmuletBase amulet)
     {
-        AmuletosEquipados.Add(amuleto);
-        amuleto.AplicarEfecto(stats);
+        equippedAmulets.Add(amulet);
+        amulet.ApplyEffect(stats);
+        ShowEquippedAmulets();
     }
 
-    public void QuitarAmuleto(AmuletoBase amuleto)
+    public void RemoveAmulet(AmuletBase amulet)
     {
-        if (AmuletosEquipados.Remove(amuleto))
+        if (equippedAmulets.Remove(amulet))
         {
-            amuleto.RemoverObjeto(stats);
+            amulet.RemoveEffect(stats);
+            ShowEquippedAmulets();
         }
     }
 
-    void MostrarAmuletosEquipados()
+    private void ShowEquippedAmulets()
     {
-        foreach(var amuleto in AmuletosEquipados)
+        foreach (Transform child in equippedPanel)
         {
-            GameObject botonGO = Instantiate(panelEquipadosPrefab, panelDisponible);
-            botonGO.GetComponentInChildren<Text>().text = amuleto.Name;
+            Destroy(child.gameObject);
+        }
 
-
-
-            botonGO.GetComponent<Button>().onClick.AddListener(() =>
+        foreach (var amulet in equippedAmulets)
+        {
+            GameObject buttonGO = Instantiate(equippedButtonPrefab, equippedPanel);
+            buttonGO.GetComponentInChildren<Text>().text = amulet.amuletName;
+            buttonGO.GetComponent<Button>().onClick.AddListener(() =>
             {
-                amuletoManager.QuitarAmuleto(amuleto);
-                MostrarAmuletosEquipados();
+                RemoveAmulet(amulet);
             });
-
-
         }
-    }
+    }*/
 }
