@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d3d7592ba582f4bb3ec23afbe70614, type: 3}
-  m_Name: VidaMax
+  m_Script: {fileID: 11500000, guid: c2f1a4c3f2009e2499147d0aec69838e, type: 3}
+  m_Name: MaxHealth
   m_EditorClassIdentifier: 
-  Name: Vitalidad
-  Icono: {fileID: 0}
-  MaxLife: 100
+  amuletName: 
+  icon: {fileID: 0}
+  extraMaxHealth: 100
