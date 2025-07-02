@@ -38,7 +38,15 @@ public class AudioManager : MonoBehaviour
             ChangeMusicByScene();
         }
     }
+    public void PlayMusic(AudioClip newClip)
+    {
+        if (musicSource == null) return;
 
+        if (musicSource.clip == newClip && musicSource.isPlaying) return;
+
+        musicSource.clip = newClip;
+        musicSource.Play();
+    }
     private void ChangeMusicByScene()
     {
         string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
