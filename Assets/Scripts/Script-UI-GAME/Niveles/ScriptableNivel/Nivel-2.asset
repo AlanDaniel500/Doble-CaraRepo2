@@ -17,4 +17,3 @@ MonoBehaviour:
   "da\xF1oEnemigo": 60
   turnosParaAtacar: 3
   spriteEnemigo: {fileID: 0}
-  musicaDelNivel: {fileID: 8300000, guid: df242772a17dab649b99194abbabd4b6, type: 3}

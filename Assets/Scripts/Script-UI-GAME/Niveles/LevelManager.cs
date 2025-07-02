@@ -52,8 +52,6 @@ public class LevelManager : MonoBehaviour
 
     public void CargarNivel(int id)
     {
-
-
         if (id < 0 || id >= niveles.Length)
         {
             Debug.LogWarning("Nivel inválido.");
@@ -71,26 +69,16 @@ public class LevelManager : MonoBehaviour
                 datos.turnosParaAtacar,
                 datos.spriteEnemigo
             );
-
         }
         else
         {
             Debug.LogError("EnemyController no asignado en LevelManager.");
         }
 
-        if (AudioManager.Instance != null && datos.musicaDelNivel != null)
-        {
-        AudioManager.Instance.PlayMusic(datos.musicaDelNivel);
-        }
-
         Debug.Log("Nivel cargado: " + (nivelActual + 1));
 
         // Mostrar la pantalla de nivel con fade
         MostrarPantallaNivel();
-
-
-
-
     }
 
     public void SubirDeNivel()
