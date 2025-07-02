@@ -75,6 +75,11 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("EnemyController no asignado en LevelManager.");
         }
 
+        if (AudioManager.Instance != null && datos.musicaDelNivel != null)
+        {
+            AudioManager.Instance.PlayBossMusic(datos.musicaDelNivel);
+        }
+
         Debug.Log("Nivel cargado: " + (nivelActual + 1));
 
         // Mostrar la pantalla de nivel con fade
