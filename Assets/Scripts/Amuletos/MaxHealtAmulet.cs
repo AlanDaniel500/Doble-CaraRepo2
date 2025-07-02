@@ -1,6 +1,6 @@
 using UnityEngine;
 
-/*[CreateAssetMenu(menuName = "Amulet/MaxHealthAmulet")]
+[CreateAssetMenu(menuName = "Amulet/MaxHealthAmulet")]
 public class MaxHealthAmulet : AmuletBase
 {
     public int extraMaxHealth = 100;
@@ -16,4 +16,4 @@ public class MaxHealthAmulet : AmuletBase
         player.maxHealth -= extraMaxHealth;
         player.currentHealth = Mathf.Min(player.currentHealth, player.maxHealth);
     }
-}*/
+}

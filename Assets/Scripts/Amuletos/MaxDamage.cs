@@ -1,6 +1,6 @@
 using UnityEngine;
 
-/*[CreateAssetMenu(menuName = "Amulet/ExtraDamageAmulet")]
+[CreateAssetMenu(menuName = "Amulet/ExtraDamageAmulet")]
 public class ExtraDamageAmulet : AmuletBase
 {
     public float damageMultiplier = 1.2f;
@@ -14,5 +14,5 @@ public class ExtraDamageAmulet : AmuletBase
     {
         player.damage /= damageMultiplier;
     }
-}*/
+}
 

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class AmuletManager : MonoBehaviour
 {
-    /*public List<AmuletBase> equippedAmulets = new List<AmuletBase>();
+    public List<AmuletBase> equippedAmulets = new List<AmuletBase>();
     private PlayerStats stats;
 
     public Transform availablePanel;
@@ -53,5 +53,5 @@ public class AmuletManager : MonoBehaviour
                 RemoveAmulet(amulet);
             });
         }
-    }*/
+    }
 }
