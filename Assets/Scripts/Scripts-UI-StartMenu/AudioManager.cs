@@ -64,6 +64,16 @@ public class AudioManager : MonoBehaviour
     }
 
 
+    public void PlayBossMusic(AudioClip newClip)
+    {
+        if (musicSource == null) return;
+
+        if (musicSource.clip == newClip && musicSource.isPlaying) return;
+
+        musicSource.clip = newClip;
+        musicSource.Play();
+    }
+
 
     public void PlayMusic(string name)
     {
