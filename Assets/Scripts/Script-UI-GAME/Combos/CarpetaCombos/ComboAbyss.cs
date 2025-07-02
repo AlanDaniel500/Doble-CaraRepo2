@@ -36,7 +36,7 @@ public class ComboAbyss : MonoBehaviour, ICombo
 
         int totalDaño = dañoBase + sumaValores;
 
-        Debug.Log($"Combo Abismo activado 🌑 Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
+        Debug.Log($"Combo Abismo activado Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
 
         return totalDaño;
     }

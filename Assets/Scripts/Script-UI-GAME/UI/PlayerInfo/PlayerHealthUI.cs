@@ -27,6 +27,19 @@ public class PlayerHealthUI : MonoBehaviour
         {
             Debug.LogWarning("EnemyController no encontrado en la escena.");
         }
+
+        // Aplicar amuleto de vida si existe
+        int bonus = PlayerPrefs.GetInt("Player_MaxHealth_Bonus", 0);
+        maxHealth += bonus;
+        currentHealth = maxHealth;
+        UpdateHealthUI();
+
+        // Otros efectos (bloqueos, daño, etc.)
+        int shields = PlayerPrefs.GetInt("Player_Shields", 0);
+        DamageModifierManager.Instance.SetShields(shields);
+
+        float dmgMultiplier = PlayerPrefs.GetFloat("Player_DamageMultiplier", 1f);
+        DamageModifierManager.Instance.SetDamageMultiplier(dmgMultiplier);
     }
 
     void Update()

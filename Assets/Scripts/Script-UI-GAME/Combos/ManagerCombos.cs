@@ -40,7 +40,7 @@ public class ManagerCombos : MonoBehaviour
 
         if (combo != null)
         {
-            int daño = combo.CalcularDaño(cartas);
+            int baseDamage = combo.CalcularDaño(cartas);
 
             // Verifica si tiene efecto especial y pasa player
             if (combo is IComboConEfecto comboConEfecto)
@@ -48,11 +48,17 @@ public class ManagerCombos : MonoBehaviour
                 comboConEfecto.AplicarEfecto(cartas, player);
             }
 
-            return daño;
+            // Aplicar multiplicador del amuleto
+            float finalDamage = baseDamage * AmuletEffectManager.Instance.GetDamageMultiplier();
+
+            Debug.Log($"Combo aplicado con multiplicador de amuleto: {baseDamage} x {AmuletEffectManager.Instance.GetDamageMultiplier()} = {finalDamage}");
+
+            return Mathf.RoundToInt(finalDamage);
         }
 
         return 0;
     }
+
 
     public void SetCartas(List<CardData> nuevasCartas)
     {

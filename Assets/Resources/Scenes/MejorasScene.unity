@@ -1684,6 +1684,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440162036}
   m_CullTransparentMesh: 1
+--- !u!1 &1660288325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660288327}
+  - component: {fileID: 1660288326}
+  m_Layer: 0
+  m_Name: AmuletSelectoUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1660288326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660288325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891e7e95f0fb2044abdf1cc6ef787788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amuletButtons:
+  - button: {fileID: 409944519}
+    nameText: {fileID: 755629219}
+    descriptionText: {fileID: 502618808}
+  - button: {fileID: 186763228}
+    nameText: {fileID: 1262472582}
+    descriptionText: {fileID: 2030975126}
+  - button: {fileID: 1261911364}
+    nameText: {fileID: 1840627073}
+    descriptionText: {fileID: 1840627073}
+  nextScene: GAME
+--- !u!4 &1660288327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660288325}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 124.208755, y: 84.536255, z: -4.2606845}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749729849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,3 +2557,4 @@ SceneRoots:
   - {fileID: 2127240697}
   - {fileID: 1786678156}
   - {fileID: 583399957}
+  - {fileID: 1660288327}
