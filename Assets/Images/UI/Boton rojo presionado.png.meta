@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boton rojo presionado_0: -2322741681453248770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

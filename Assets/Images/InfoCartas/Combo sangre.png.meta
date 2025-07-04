@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: c965514803fa8ac46bc8e7d68de0131e
+guid: 5b8ac18607ce178498a6220899101ac2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9061009163911946215
-    second: boton men_0
+      213: 4430734739447052353
+    second: Combo sangre_0
+  - first:
+      213: -2685131944409831490
+    second: Combo sangre_1
+  - first:
+      213: 8085378583519028756
+    second: Combo sangre_2
+  - first:
+      213: 6951500045097542546
+    second: Combo sangre_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boton men_0
+      name: Combo sangre_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 16
+        y: 79
+        width: 108
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7efd789c3db2fbd70800000000000000
-      internalID: 9061009163911946215
+      spriteID: 14879be35c12d7d30800000000000000
+      internalID: 4430734739447052353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo sangre_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 79
+        width: 109
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7e56619be7cbad0800000000000000
+      internalID: -2685131944409831490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo sangre_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 79
+        width: 109
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416e339cbf8053070800000000000000
+      internalID: 8085378583519028756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo sangre_3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 79
+        width: 108
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293a62cd570b87060800000000000000
+      internalID: 6951500045097542546
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      boton men_0: 9061009163911946215
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

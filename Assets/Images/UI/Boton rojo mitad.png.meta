@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boton rojo mitad_0: 4160490812616054110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
