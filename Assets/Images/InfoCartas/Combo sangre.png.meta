@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Combo sangre_0: 4430734739447052353
+      Combo sangre_1: -2685131944409831490
+      Combo sangre_2: 8085378583519028756
+      Combo sangre_3: 6951500045097542546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Combo oscuras_0: -6363398116462923968
+      Combo oscuras_1: 2507160013785492109
+      Combo oscuras_2: 2710683298266646143
+      Combo oscuras_3: -5822720438467670385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

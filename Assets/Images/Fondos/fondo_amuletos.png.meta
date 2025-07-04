@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fondo_amuletos_0: 8531083247469974442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

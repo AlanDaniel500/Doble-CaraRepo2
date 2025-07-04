@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Combo LUZ_0: 2041865121943223154
+      Combo LUZ_1: 9102418357347624310
+      Combo LUZ_2: -7147172917251254305
+      Combo LUZ_3: -263974364148828968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
