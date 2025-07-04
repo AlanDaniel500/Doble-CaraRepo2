@@ -80,4 +80,19 @@ public class PlayerHealthUI : MonoBehaviour
         if (healthBarImage != null)
             healthBarImage.fillAmount = (float)currentHealth / maxHealth;
     }
+
+    // --- NUEVOS MÉTODOS PARA AMULETO ---
+
+    public void AumentarVidaMaxima(int cantidad)
+    {
+        maxHealth += cantidad;
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
+        UpdateHealthUI();
+    }
+
+    public void CurarAlMaximo()
+    {
+        currentHealth = maxHealth;
+        UpdateHealthUI();
+    }
 }

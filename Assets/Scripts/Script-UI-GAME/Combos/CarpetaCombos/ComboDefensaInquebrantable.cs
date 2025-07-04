@@ -2,15 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using CardSystem;
 
-public class ComboDefensaInquebrantable : MonoBehaviour, ICombo
+public class ComboDefensaInquebrantable : MonoBehaviour, ICombo, IComboConEfecto
 {
     public string Nombre => "Defensa Inquebrantable";
-    
-    [SerializeField] private int prioridad = 6; // Editable desde inspector
+
+    [SerializeField] private int prioridad = 6;
     public int Prioridad => prioridad;
 
+    [SerializeField] private int dañoBase = 150;
 
-    [SerializeField] private int dañoBase = 150; // Editable desde el editor
+    private int ultimoDaño = 0;
 
     public bool CheckCombo(List<CardData> cartas)
     {
@@ -27,16 +28,30 @@ public class ComboDefensaInquebrantable : MonoBehaviour, ICombo
 
     public int CalcularDaño(List<CardData> cartas)
     {
-        int sumaValores = 0;
+        int suma = 0;
 
         foreach (var carta in cartas)
         {
-            sumaValores += carta.cardNumber;
+            suma += carta.cardNumber;
         }
 
-        int totalDaño = dañoBase + sumaValores;
-        Debug.Log($"Combo Defensa Inquebrantable activado ⚡ Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
+        ultimoDaño = dañoBase + suma;
+        Debug.Log($"Combo Defensa Inquebrantable activado ⚡ Daño base: {dañoBase} + suma cartas: {suma} = {ultimoDaño}");
+        return ultimoDaño;
+    }
 
-        return totalDaño;
+    public void AplicarEfecto(List<CardData> cartas, Player player)
+    {
+        EnemyController enemy = FindFirstObjectByType<EnemyController>();
+
+        if (enemy != null)
+        {
+            enemy.RetrasarProximoAtaque(); // <- este método lo agregaste antes
+            Debug.Log($"Combo Defensa Inquebrantable: se retrasó el ataque enemigo 1 turno 🛡️");
+        }
+        else
+        {
+            Debug.LogWarning("EnemyController no encontrado para aplicar efecto de Defensa Inquebrantable");
+        }
     }
 }

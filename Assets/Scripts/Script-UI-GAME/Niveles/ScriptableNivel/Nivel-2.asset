@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Nivel-2
   m_EditorClassIdentifier: 
   nivelID: 2
+  nombreEscena: Nivel 2
   vidaEnemigo: 600
   "da\xF1oEnemigo": 60
   turnosParaAtacar: 3

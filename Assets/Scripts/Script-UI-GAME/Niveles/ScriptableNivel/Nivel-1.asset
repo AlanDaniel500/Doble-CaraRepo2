@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Nivel-1
   m_EditorClassIdentifier: 
   nivelID: 1
+  nombreEscena: Nivel 1
   vidaEnemigo: 400
   "da\xF1oEnemigo": 40
   turnosParaAtacar: 4
-  spriteEnemigo: {fileID: 6714509266741839371, guid: 478d34e8c90239a49b8c3cdec2ebeb86, type: 3}
+  spriteEnemigo: {fileID: -2017082945325394929, guid: 55d7c732f850fa040bcfe8ee7a1f0731, type: 3}
+
   musicaDelNivel: {fileID: 8300000, guid: 18eb5fb49e12e034e9eebee23c7b42b3, type: 3}

@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivelID: 3
   vidaEnemigo: 1000
-  "da\xF1oEnemigo": 30
+  "da\xF1oEnemigo": 50
   turnosParaAtacar: 2
-  spriteEnemigo: {fileID: 6714509266741839371, guid: 478d34e8c90239a49b8c3cdec2ebeb86, type: 3}
+
+  spriteEnemigo: {fileID: 0}
+
   musicaDelNivel: {fileID: 0}

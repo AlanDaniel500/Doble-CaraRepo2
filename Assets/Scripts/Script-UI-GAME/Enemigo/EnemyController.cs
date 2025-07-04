@@ -23,24 +23,32 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float delayAntesDeAtacar = 1f;
     [SerializeField] private float delayDespuesDeAtacar = 1f;
 
+    [Header("Efectos de Veneno")]
+    [SerializeField] private int turnosConVeneno = 0;
+    [SerializeField] private int dañoVenenoPorTurno = 0;
+
+    [Header("Efectos de Oscuridad")]
+    [SerializeField] private int turnosConReduccion = 0;
+    [SerializeField] private int reduccionDaño = 0;
+
     private PlayerHealthUI playerHealthUI;
     private bool estaActivo = false;
+
+    public bool EstaActivo()
+    {
+        return estaActivo;
+    }
 
     private void Start()
     {
         playerHealthUI = FindFirstObjectByType<PlayerHealthUI>();
-
-
-        Debug.Log($"[ENEMY START] vidaMaxima={vidaMaxima}, vidaActual={vidaActual}");
-        
-        // No hacemos nada más. Esperamos a SetStats para activar al enemigo.
-        ActualizarTextoVida();
-        ActualizarTextoDaño();
-        ActualizarTextoTurnos();
+        Debug.Log("[EnemyController] Start: PlayerHealthUI encontrado.");
     }
 
     public void SetStats(int nuevaVida, int nuevoDaño, int nuevosTurnos, Sprite nuevoSprite)
     {
+        Debug.Log($"[EnemyController] SetStats llamado: vida={nuevaVida}, daño={nuevoDaño}, turnos={nuevosTurnos}");
+
         vidaMaxima = nuevaVida;
         vidaActual = nuevaVida;
         daño = nuevoDaño;
@@ -48,21 +56,50 @@ public class EnemyController : MonoBehaviour
         turnosRestantes = nuevosTurnos;
 
         if (spriteRenderer != null && nuevoSprite != null)
+        {
             spriteRenderer.sprite = nuevoSprite;
-
-        Debug.Log($"[ENEMY SetStats] vidaMaxima={vidaMaxima}, vidaActual={vidaActual}");
+            Debug.Log("[EnemyController] Sprite actualizado.");
+        }
 
         ActualizarTextoVida();
         ActualizarTextoDaño();
         ActualizarTextoTurnos();
 
-        estaActivo = true; // Activamos al enemigo una vez configurado
+        estaActivo = true;
+        Debug.Log("[EnemyController] Enemigo activado con nuevos stats.");
     }
 
     public void OnPlayerTurnEnd()
     {
         if (!estaActivo) return;
 
+        // Aplicar veneno
+        if (turnosConVeneno > 0)
+        {
+            Debug.Log($"[EnemyController] Turno con veneno activo: quedan {turnosConVeneno} turnos. Recibe {dañoVenenoPorTurno} de daño ☠");
+            AplicarDanoDesdeCombo(dañoVenenoPorTurno);
+            turnosConVeneno--;
+
+            if (turnosConVeneno == 0)
+            {
+                dañoVenenoPorTurno = 0;
+                Debug.Log("[EnemyController] El veneno ha desaparecido 🧼");
+            }
+        }
+
+        // Reducir turnos de debuff de oscuridad
+        if (turnosConReduccion > 0)
+        {
+            turnosConReduccion--;
+
+            if (turnosConReduccion == 0)
+            {
+                reduccionDaño = 0;
+                Debug.Log("[EnemyController] El efecto de oscuridad se ha desvanecido 🌫️");
+            }
+        }
+
+        // Progresar hacia el ataque
         turnosRestantes--;
 
         if (turnosRestantes <= 0)
@@ -99,11 +136,20 @@ public class EnemyController : MonoBehaviour
     {
         if (!estaActivo) return;
 
-        Debug.Log("¡El enemigo ataca!");
+        int dañoFinal = daño;
+
+        if (turnosConReduccion > 0)
+        {
+            dañoFinal -= reduccionDaño;
+            if (dañoFinal < 0) dañoFinal = 0;
+            Debug.Log($"[EnemyController] Ataque reducido por oscuridad: {dañoFinal} (original: {daño}) 🌑");
+        }
+
+        Debug.Log("[EnemyController] ¡El enemigo ataca!");
 
         if (playerHealthUI != null)
         {
-            playerHealthUI.TakeDamage(daño);
+            playerHealthUI.TakeDamage(dañoFinal);
         }
 
         if (CameraShake.Instance != null)
@@ -121,14 +167,53 @@ public class EnemyController : MonoBehaviour
         vidaActual -= cantidad;
         if (vidaActual < 0) vidaActual = 0;
 
-        Debug.Log($"Enemigo recibió {cantidad} de daño. Vida restante: {vidaActual}");
+        Debug.Log($"[EnemyController] Daño recibido: {cantidad}. Vida restante: {vidaActual}");
         ActualizarTextoVida();
 
         if (vidaActual == 0)
         {
-            Debug.Log("¡El enemigo ha sido derrotado!");
-            // Lógica de victoria o muerte del enemigo va aquí
+            Debug.Log("[EnemyController] ¡El enemigo ha sido derrotado!");
+            estaActivo = false;
+
+            if (LevelManager.Instance != null)
+            {
+                Debug.Log("[EnemyController] Solicitando subir de nivel a LevelManager...");
+                LevelManager.Instance.SubirDeNivel();
+            }
+            else
+            {
+                Debug.LogWarning("[EnemyController] LevelManager.Instance es null al intentar subir de nivel.");
+            }
         }
+    }
+
+    public void AplicarVeneno(int dañoPorTurno, int turnos)
+    {
+        if (!estaActivo) return;
+
+        dañoVenenoPorTurno = dañoPorTurno;
+        turnosConVeneno = turnos;
+
+        Debug.Log($"[EnemyController] Aplicado veneno: {dañoPorTurno} por turno durante {turnos} turnos 🐍");
+    }
+
+    public void AplicarDebuffDaño(int cantidad, int turnos)
+    {
+        if (!estaActivo) return;
+
+        reduccionDaño = cantidad;
+        turnosConReduccion = turnos;
+
+        Debug.Log($"[EnemyController] Reducción de daño aplicada: -{cantidad} por {turnos} turnos 🧿");
+    }
+
+    public void RetrasarProximoAtaque()
+    {
+        if (!estaActivo) return;
+
+        turnosRestantes++;
+        ActualizarTextoTurnos();
+        Debug.Log("[EnemyController] Turno de ataque retrasado +1 🛡");
     }
 
     private void ActualizarTextoVida()
