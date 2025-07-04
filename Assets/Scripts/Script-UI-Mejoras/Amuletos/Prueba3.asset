@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509cf0ee8501793488c6e0e1b7d17c6f, type: 3}
   m_Name: Prueba3
   m_EditorClassIdentifier: 
-  nombre: Como estas
-  imagen: {fileID: -5676895610245459995, guid: c0f6b039e03f23a48b3a991b44c1fde9, type: 3}
-  descripcion: Todo bien
-  aumentaVida: 1
+  nombre: Escudo Inicial
+  imagen: {fileID: -363950430480790128, guid: 29b33b9391af3484592b433c32c5786a, type: 3}
+  descripcion: El enemigo tarda 1 turno mas en dar su primer ataque.
+  aumentaVida: 0
+  cantidadAumentoVida: 0
+  curarInstantaneo: 0
+  cantidadCuraInstantanea: 0
+  "da\xF1oAlProximoEnemigo": 0
+  "cantidadDa\xF1oAlProximoEnemigo": 0
   "aumentaDa\xF1o": 0
   reduceTurnosEnemigo: 0
   curaAlInicio: 0

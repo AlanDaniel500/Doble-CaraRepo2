@@ -19,7 +19,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Nombres de escena")]
     [SerializeField] private string escenaMejoras = "MejorasScene";
-    [SerializeField] private string escenaCombate = "GAME"; // 🔧 CORREGIDO: nombre real de tu escena
+    [SerializeField] private string escenaCombate = "GAME";
+    [SerializeField] private string escenaFinal = "EndScreen";  // NUEVO
 
     private void Awake()
     {
@@ -35,12 +36,6 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-    }
-
-    private void Start()
-    {
-        Debug.Log("[LevelManager] Start: Cargando nivel guardado...");
-        StartCoroutine(IniciarNivelDesdeGuardado());
     }
 
     private void OnDestroy()
@@ -76,7 +71,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private IEnumerator IniciarNivelDesdeGuardado()
+    public IEnumerator IniciarNivelDesdeGuardado()
     {
         int gameResult = PlayerPrefs.GetInt(GameResultKey, 1);
 
@@ -121,7 +116,7 @@ public class LevelManager : MonoBehaviour
         {
             nivelActual++;
             PlayerPrefs.SetInt(NivelKey, nivelActual + 1);
-            PlayerPrefs.SetInt(GameResultKey, 1);
+            PlayerPrefs.SetInt(GameResultKey, 1); // Victoria
             PlayerPrefs.Save();
 
             Debug.Log($"[LevelManager] Subiendo al nivel {nivelActual + 1} y cargando escena de mejoras...");
@@ -131,8 +126,12 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("[LevelManager] Último nivel completado. Fin del juego.");
-            // Podés cargar una escena de final aquí
+            Debug.Log("[LevelManager] Último nivel completado. Cargando escena final.");
+            PlayerPrefs.SetInt(GameResultKey, 1); // Victoria final
+            PlayerPrefs.Save();
+
+            nivelCargando = true;
+            SceneManager.LoadScene(escenaFinal);
         }
     }
 
@@ -140,7 +139,7 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("[LevelManager] Continuando al combate...");
         nivelCargando = false;
-        SceneManager.LoadScene(escenaCombate); // ✅ Ahora usa "GAME"
+        SceneManager.LoadScene(escenaCombate);
     }
 
     public void MostrarPantallaNivel()

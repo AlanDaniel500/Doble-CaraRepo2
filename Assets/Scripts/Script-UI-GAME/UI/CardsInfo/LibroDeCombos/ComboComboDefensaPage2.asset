@@ -16,4 +16,4 @@ MonoBehaviour:
   descripcion: 'Combina 4 cartas de luz '
   imagen: {fileID: 21300000, guid: 4716e954e82a8144a87b096415c5b740, type: 3}
   "da\xF1o": 100
-  efectoExtra: Te vuelve indestrutible por un turno
+  efectoExtra: Retrasa el ataque del enemigo por 1 turno.

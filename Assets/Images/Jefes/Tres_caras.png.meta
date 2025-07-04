@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tres_caras_0: -2017082945325394929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

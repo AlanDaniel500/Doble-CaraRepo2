@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Diablo_0: -3997109129123912755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

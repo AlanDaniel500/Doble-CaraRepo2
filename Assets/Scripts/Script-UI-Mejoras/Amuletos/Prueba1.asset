@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Prueba1
   m_EditorClassIdentifier: 
   nombre: Amuleto Vitalidad
-  imagen: {fileID: -8837066245659581175, guid: a6a73fe8dcc05c54690fd41c406594ec, type: 3}
-  descripcion: Aumenta 100 de vida maxima.
+  imagen: {fileID: -2838047234557678466, guid: 2e0a47f5fb7e194458cf581272d6e360, type: 3}
+  descripcion: Aumenta 150 de vida maxima.
   aumentaVida: 1
-  cantidadAumentoVida: 200
+  cantidadAumentoVida: 150
   "aumentaDa\xF1o": 0
   reduceTurnosEnemigo: 0
   curaAlInicio: 0
