@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b667a9e61b5b2f3429fc3012f47ad540
+guid: b3fd9c1d52425ce4bbab69d6103188c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3599497474501048100
-    second: Muerte 2_0
+      213: -2322741681453248770
+    second: Boton rojo presionado_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Muerte 2_0
+      name: Boton rojo presionado_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 336
-        height: 512
+        x: 26
+        y: 30
+        width: 337
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 427fc81d1ebf3f130800000000000000
-      internalID: 3599497474501048100
+      spriteID: efe4cf34fb6f3cfd0800000000000000
+      internalID: -2322741681453248770
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Muerte 2_0: 3599497474501048100
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
