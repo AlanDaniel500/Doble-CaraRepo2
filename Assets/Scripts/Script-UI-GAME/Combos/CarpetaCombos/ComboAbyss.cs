@@ -2,15 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using CardSystem;
 
-public class ComboAbyss : MonoBehaviour, ICombo
+public class ComboAbyss : MonoBehaviour, ICombo, IComboConEfecto
 {
     public string Nombre => "Abismo";
-    
-    [SerializeField] private int prioridad = 6; // Editable desde inspector
+
+    [SerializeField] private int prioridad = 6;
     public int Prioridad => prioridad;
 
+    [SerializeField] private int dañoBase = 250;
 
-    [SerializeField] private int dañoBase = 250; // Editable desde el inspector
+    [Header("Efecto Oscuridad")]
+    [SerializeField] private int reduccionDaño = 30;
+    [SerializeField] private int turnosDeDebuff = 2;
 
     public bool CheckCombo(List<CardData> cartas)
     {
@@ -35,10 +38,21 @@ public class ComboAbyss : MonoBehaviour, ICombo
         }
 
         int totalDaño = dañoBase + sumaValores;
-
         Debug.Log($"Combo Abismo activado 🌑 Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
 
         return totalDaño;
     }
-}
 
+    public void AplicarEfecto(List<CardData> cartas, Player player)
+    {
+        EnemyController enemy = FindFirstObjectByType<EnemyController>();
+        if (enemy != null)
+        {
+            enemy.AplicarDebuffDaño(reduccionDaño, turnosDeDebuff);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró EnemyController para aplicar debuff de oscuridad.");
+        }
+    }
+}
