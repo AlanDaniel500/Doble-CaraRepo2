@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04195bf8f4979ea44bc1d6788e59e6b1, type: 3}
-  m_Name: ComboCerberoPage2
+  m_Name: ComboAbismoPage6
   m_EditorClassIdentifier: 
-  titulo: Combo Gemelo
-  descripcion: "Combina 2 carta y hace el da\xF1o de la carta mas su da\xF1o base"
-  imagen: {fileID: -6417750817691229390, guid: 625efae2eaa68d4408a9599115c2ad11, type: 3}
-  "da\xF1o": 20
+  titulo: Abismo
+  descripcion: Combina 4 cartas de palo de oscuridad
+  imagen: {fileID: 21300000, guid: 873dd060aa9605646a320a67c54d369c, type: 3}
+  "da\xF1o": 250
   efectoExtra: 

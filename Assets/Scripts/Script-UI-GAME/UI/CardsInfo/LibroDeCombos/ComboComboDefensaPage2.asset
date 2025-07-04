@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04195bf8f4979ea44bc1d6788e59e6b1, type: 3}
-  m_Name: ComboPandemonioPage2
+  m_Name: ComboComboDefensaPage2
   m_EditorClassIdentifier: 
-  titulo: Pandemonio
-  descripcion: Combina 4 cartas de muerte
-  imagen: {fileID: -6519437951139727079, guid: 2c586e120f53b8e4e917732ec5e5c453, type: 3}
+  titulo: Defensa Inquenbrantable
+  descripcion: 'Combina 4 cartas de luz '
+  imagen: {fileID: 21300000, guid: 4716e954e82a8144a87b096415c5b740, type: 3}
   "da\xF1o": 100
-  efectoExtra: Reduce el ataque del enemigo por 1 turno
+  efectoExtra: Te vuelve indestrutible por un turno
