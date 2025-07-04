@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05efaefccb6b27f408226278642e4d26, type: 3}
   m_Name: Blood Card 6
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Blood Card
   cardImage: {fileID: -5287507215282076907, guid: f2865e192e065f046b2eeedc4e21f6be, type: 3}
   cardType: 3
   cardNumber: 6
