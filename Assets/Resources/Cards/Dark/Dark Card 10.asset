@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05efaefccb6b27f408226278642e4d26, type: 3}
   m_Name: Dark Card 10
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Dark card
   cardImage: {fileID: -5884575662030404092, guid: 4e9d2e2aecd89754d858fe0ecd7aeb45, type: 3}
   cardType: 1
   cardNumber: 10

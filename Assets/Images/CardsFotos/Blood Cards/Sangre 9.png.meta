@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sangre 9_0: 947363066737386140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
