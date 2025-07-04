@@ -770,7 +770,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d7f2a72ae79904c47a683ea8badd7558, type: 2}
   - {fileID: 11400000, guid: 51f55aba5a7f6d94ba40fb570840bd26, type: 2}
   - {fileID: 11400000, guid: 87a79acde82be3046af740fe262823ce, type: 2}
+  - {fileID: 11400000, guid: 6e583e322a966e440b964e7f897d62ad, type: 2}
   - {fileID: 11400000, guid: d4904edc344e5c647a2170123d802bae, type: 2}
+  - {fileID: 11400000, guid: ca49c035b89c9a148970a5d5d8e9b575, type: 2}
   tituloIzq: {fileID: 1919382368}
   imagenIzq: {fileID: 1770069120}
   descripcionIzq: {fileID: 1301608135}
@@ -1180,7 +1182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.9372549}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1552,7 +1554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7354541517734919108, guid: 4e27d971731e2e544a68264198fa3eb7, type: 3}
+  m_Sprite: {fileID: 8136299535190357656, guid: e03ca48a2b9e9d34386e2595663ea576, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2876,6 +2878,10 @@ PrefabInstance:
       propertyPath: textoTurnos
       value: 
       objectReference: {fileID: 1293828957}
+    - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
       propertyPath: delayDespuesDeAtacar
       value: 0.7
