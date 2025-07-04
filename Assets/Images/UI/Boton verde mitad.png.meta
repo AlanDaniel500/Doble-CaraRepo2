@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boton verde mitad_0: 2010172026968274863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
