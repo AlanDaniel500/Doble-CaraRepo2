@@ -26,21 +26,23 @@ public class EnemyController : MonoBehaviour
     private PlayerHealthUI playerHealthUI;
     private bool estaActivo = false;
 
+    public bool EstaActivo()
+    {
+        return estaActivo;
+    }
+
     private void Start()
     {
         playerHealthUI = FindFirstObjectByType<PlayerHealthUI>();
+        Debug.Log("[EnemyController] Start: PlayerHealthUI encontrado.");
 
-
-        Debug.Log($"[ENEMY START] vidaMaxima={vidaMaxima}, vidaActual={vidaActual}");
-        
-        // No hacemos nada más. Esperamos a SetStats para activar al enemigo.
-        ActualizarTextoVida();
-        ActualizarTextoDaño();
-        ActualizarTextoTurnos();
+        // No actualizamos stats ni UI aquí, lo hará LevelManager con SetStats
     }
 
     public void SetStats(int nuevaVida, int nuevoDaño, int nuevosTurnos, Sprite nuevoSprite)
     {
+        Debug.Log($"[EnemyController] SetStats llamado: vida={nuevaVida}, daño={nuevoDaño}, turnos={nuevosTurnos}");
+
         vidaMaxima = nuevaVida;
         vidaActual = nuevaVida;
         daño = nuevoDaño;
@@ -48,15 +50,17 @@ public class EnemyController : MonoBehaviour
         turnosRestantes = nuevosTurnos;
 
         if (spriteRenderer != null && nuevoSprite != null)
+        {
             spriteRenderer.sprite = nuevoSprite;
-
-        Debug.Log($"[ENEMY SetStats] vidaMaxima={vidaMaxima}, vidaActual={vidaActual}");
+            Debug.Log("[EnemyController] Sprite actualizado.");
+        }
 
         ActualizarTextoVida();
         ActualizarTextoDaño();
         ActualizarTextoTurnos();
 
-        estaActivo = true; // Activamos al enemigo una vez configurado
+        estaActivo = true;
+        Debug.Log("[EnemyController] Enemigo activado con nuevos stats.");
     }
 
     public void OnPlayerTurnEnd()
@@ -99,7 +103,7 @@ public class EnemyController : MonoBehaviour
     {
         if (!estaActivo) return;
 
-        Debug.Log("¡El enemigo ataca!");
+        Debug.Log("[EnemyController] ¡El enemigo ataca!");
 
         if (playerHealthUI != null)
         {
@@ -121,13 +125,27 @@ public class EnemyController : MonoBehaviour
         vidaActual -= cantidad;
         if (vidaActual < 0) vidaActual = 0;
 
-        Debug.Log($"Enemigo recibió {cantidad} de daño. Vida restante: {vidaActual}");
+        Debug.Log($"[EnemyController] Daño recibido: {cantidad}. Vida restante: {vidaActual}");
         ActualizarTextoVida();
 
         if (vidaActual == 0)
         {
-            Debug.Log("¡El enemigo ha sido derrotado!");
-            // Lógica de victoria o muerte del enemigo va aquí
+            Debug.Log("[EnemyController] ¡El enemigo ha sido derrotado!");
+
+            estaActivo = false;
+
+            // Aquí llamamos a subir de nivel en LevelManager
+            if (LevelManager.Instance != null)
+            {
+                Debug.Log("[EnemyController] Solicitando subir de nivel a LevelManager...");
+                LevelManager.Instance.SubirDeNivel();
+            }
+            else
+            {
+                Debug.LogWarning("[EnemyController] LevelManager.Instance es null al intentar subir de nivel.");
+            }
+
+            // Podés agregar animación de muerte o lógica de muerte aquí
         }
     }
 

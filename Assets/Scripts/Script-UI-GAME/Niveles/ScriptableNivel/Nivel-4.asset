@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Nivel-4
   m_EditorClassIdentifier: 
   nivelID: 4
+  nombreEscena: Nivel 4
   vidaEnemigo: 1200
   "da\xF1oEnemigo": 100
   turnosParaAtacar: 3
   spriteEnemigo: {fileID: 0}
+  musicaDelNivel: {fileID: 0}

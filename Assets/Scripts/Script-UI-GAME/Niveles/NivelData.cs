@@ -7,7 +7,6 @@ public class NivelData : ScriptableObject
     public int vidaEnemigo;
     public int dañoEnemigo;
     public int turnosParaAtacar;
-    public Sprite spriteEnemigo; // <-- ESTE CAMPO DEBE ESTAR DEFINIDO
+    public Sprite spriteEnemigo;
     public AudioClip musicaDelNivel;
-    // Podés agregar más cosas después como música, fondo, nombre del jefe, etc.
 }

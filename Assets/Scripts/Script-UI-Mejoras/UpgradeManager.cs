@@ -1,81 +1,54 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class UpgradeManager : MonoBehaviour
 {
-    [Header("Botón de confirmación")]
-    [SerializeField] private Button confirmButton;
+    [Header("Amuletos disponibles")]
+    [SerializeField] private List<AmuletoListaEfectos> amuletosDisponibles;
 
-    [Header("Botones de amuleto")]
-    [SerializeField] private Button botonOpcion1;
-    [SerializeField] private Button botonOpcion2;
-    [SerializeField] private Button botonOpcion3;
+    [Header("UI")]
+    [SerializeField] private UIAmuletoHandler uiHandler;
 
-    // Colores para el efecto visual
-    [Header("Colores de selección")]
-    [SerializeField] private Color colorSeleccionado = Color.white;
-    [SerializeField] private Color colorNoSeleccionado = Color.gray;
-
-    private Button[] charmButtons;
-    private int selectedCharmIndex = -1;
-
-    void Start()
+    private void Start()
     {
-        charmButtons = new Button[] { botonOpcion1, botonOpcion2, botonOpcion3 };
-
-        confirmButton.gameObject.SetActive(false);
-        confirmButton.onClick.AddListener(OnConfirm);
-
-        for (int i = 0; i < charmButtons.Length; i++)
-        {
-            int index = i;
-            charmButtons[i].onClick.AddListener(() => OnCharmSelected(index));
-        }
-
-        ResetButtonColors();
+        MostrarOpciones();
+        uiHandler.confirmarBoton.onClick.AddListener(ConfirmarSeleccion);
     }
 
-    void OnCharmSelected(int index)
+    void MostrarOpciones()
     {
-        selectedCharmIndex = index;
-        confirmButton.gameObject.SetActive(true);
-        Debug.Log("Se seleccionó un botón: " + index);
+        List<AmuletoListaEfectos> seleccionados = new List<AmuletoListaEfectos>();
+        List<int> indicesYaElegidos = new List<int>();
 
-        for (int i = 0; i < charmButtons.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
-            Image img = charmButtons[i].GetComponent<Image>();
-            if (img != null)
-                img.color = (i == index) ? colorSeleccionado : colorNoSeleccionado;
+            int index;
+            do
+            {
+                index = Random.Range(0, amuletosDisponibles.Count);
+            } while (indicesYaElegidos.Contains(index));
+
+            indicesYaElegidos.Add(index);
+            seleccionados.Add(amuletosDisponibles[index]);
         }
+
+        uiHandler.MostrarAmuletos(seleccionados);
     }
 
-    void ResetButtonColors()
+    void ConfirmarSeleccion()
     {
-        foreach (Button btn in charmButtons)
-        {
-            Image img = btn.GetComponent<Image>();
-            if (img != null)
-                img.color = colorNoSeleccionado;
-        }
-    }
-
-    void OnConfirm()
-    {
-        Debug.Log("Confirmado: charm " + selectedCharmIndex);
-
-        // Subir nivel directamente acá usando PlayerPrefs
         int nivelActual = PlayerPrefs.GetInt("NivelJugador", 1);
-        nivelActual++;
-        PlayerPrefs.SetInt("NivelJugador", nivelActual);
+        PlayerPrefs.SetInt("NivelJugador", nivelActual + 1);
+
+        var amuleto = uiHandler.GetAmuletoSeleccionado();
+        if (amuleto != null)
+        {
+            PlayerPrefs.SetString("AmuletoNombre", amuleto.nombre);
+            // Guardar efectos u otras variables si querés
+        }
+
         PlayerPrefs.Save();
-
-        Debug.Log($"Nivel subido a: {nivelActual}");
-
-        // Guardar también el charm seleccionado si lo necesitás después
-        PlayerPrefs.SetInt("CharmSeleccionado", selectedCharmIndex);
-        PlayerPrefs.Save();
-
         SceneManager.LoadScene("GAME");
     }
 }

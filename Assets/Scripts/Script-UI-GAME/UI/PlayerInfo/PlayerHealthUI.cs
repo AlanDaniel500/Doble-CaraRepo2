@@ -75,4 +75,19 @@ public class PlayerHealthUI : MonoBehaviour
         if (healthText != null)
             healthText.text = $"{currentHealth} / {maxHealth}";
     }
+
+    // --- NUEVOS MÉTODOS PARA AMULETO ---
+
+    public void AumentarVidaMaxima(int cantidad)
+    {
+        maxHealth += cantidad;
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
+        UpdateHealthUI();
+    }
+
+    public void CurarAlMaximo()
+    {
+        currentHealth = maxHealth;
+        UpdateHealthUI();
+    }
 }

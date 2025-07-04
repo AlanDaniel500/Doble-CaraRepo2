@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509cf0ee8501793488c6e0e1b7d17c6f, type: 3}
+  m_Name: Prueba1
+  m_EditorClassIdentifier: 
+  nombre: Amuleto Vitalidad
+  imagen: {fileID: -8837066245659581175, guid: a6a73fe8dcc05c54690fd41c406594ec, type: 3}
+  descripcion: Aumenta 100 de vida maxima.
+  aumentaVida: 1
+  cantidadAumentoVida: 200
+  "aumentaDa\xF1o": 0
+  reduceTurnosEnemigo: 0
+  curaAlInicio: 0
+  duplicarRecompensas: 0
