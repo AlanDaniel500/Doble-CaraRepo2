@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerHealthUI : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerHealthUI : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private Image healthBarImage;
 
     // Referencia al enemigo
     private EnemyController enemyController;
@@ -74,6 +76,9 @@ public class PlayerHealthUI : MonoBehaviour
     {
         if (healthText != null)
             healthText.text = $"{currentHealth} / {maxHealth}";
+
+        if (healthBarImage != null)
+            healthBarImage.fillAmount = (float)currentHealth / maxHealth;
     }
 
     // --- NUEVOS MÉTODOS PARA AMULETO ---

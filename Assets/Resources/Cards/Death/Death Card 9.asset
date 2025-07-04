@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05efaefccb6b27f408226278642e4d26, type: 3}
+  m_Name: Death Card 9
+  m_EditorClassIdentifier: 
+  cardName: Dark card
+  cardImage: {fileID: -3261069156879963356, guid: 05cb19d7231cbea42888f1e4f64868de, type: 3}
+  cardType: 2
+  cardNumber: 9
+  damage: 0
