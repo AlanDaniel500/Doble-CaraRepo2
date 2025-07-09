@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmuletosCraneo_0: -7560544590103705221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

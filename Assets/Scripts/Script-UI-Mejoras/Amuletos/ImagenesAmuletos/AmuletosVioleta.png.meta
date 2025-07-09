@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmuletosVioleta_0: -2159063675730053557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      amuleto_rosita_0: -363950430480790128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

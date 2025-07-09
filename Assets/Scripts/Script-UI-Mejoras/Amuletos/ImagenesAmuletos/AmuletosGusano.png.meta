@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmuletosGusano_0: -7060331810415775712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
