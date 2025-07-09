@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509cf0ee8501793488c6e0e1b7d17c6f, type: 3}
   m_Name: Prueba2
   m_EditorClassIdentifier: 
-  nombre: Hola
-  imagen: {fileID: 5432599114666307119, guid: e6fcf0e5f87d2744fb3cc2906d325b9c, type: 3}
-  descripcion: Como estas
-  aumentaVida: 1
+  nombre: Maleficio Inicial
+  imagen: {fileID: -2159063675730053557, guid: d180cb9b3a0ecf942828f3902d886ed3, type: 3}
+  descripcion: "Al comenzar el combate, inflige 100 puntos de da\xF1o directo al
+    enemigo, debilit\xE1ndolo desde el primer turno."
+  aumentaVida: 0
+  cantidadAumentoVida: 0
+  curarInstantaneo: 0
+  cantidadCuraInstantanea: 0
+  "da\xF1oAlProximoEnemigo": 1
+  "cantidadDa\xF1oAlProximoEnemigo": 100
   "aumentaDa\xF1o": 0
   reduceTurnosEnemigo: 0
   curaAlInicio: 0

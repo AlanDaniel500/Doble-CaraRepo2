@@ -22,18 +22,27 @@ public class UIVictoryManager : MonoBehaviour
 
     private void Start()
     {
-        // Conectar botones (evitar nulls)
         if (nextLevelButton != null) nextLevelButton.onClick.AddListener(OnNextLevel);
         if (exitVictoryButton != null) exitVictoryButton.onClick.AddListener(OnExitToMenu);
         if (tryAgainButton != null) tryAgainButton.onClick.AddListener(OnRetryLevel);
         if (exitDefeatButton != null) exitDefeatButton.onClick.AddListener(OnExitToMenu);
 
         int resultado = PlayerPrefs.GetInt("GameResult", -1);
+        int nivelActual = PlayerPrefs.GetInt("NivelJugador", 1);
+
         Debug.Log("[UIVictoryManager] Resultado leído de PlayerPrefs: " + resultado);
+        Debug.Log("[UIVictoryManager] Nivel actual leído de PlayerPrefs: " + nivelActual);
 
         if (resultado == 1)
         {
             MostrarVictoria();
+
+            // 🔒 Desactivar botón si es el último nivel
+            if (nivelActual > 5 && nextLevelButton != null)
+            {
+                nextLevelButton.interactable = false;
+                Debug.Log("[UIVictoryManager] Último nivel alcanzado. Botón siguiente nivel desactivado.");
+            }
         }
         else if (resultado == 0)
         {
