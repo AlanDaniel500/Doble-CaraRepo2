@@ -86,6 +86,10 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2899299680961316133}
   delayAntesDeAtacar: 1
   delayDespuesDeAtacar: 1
+  turnosConVeneno: 0
+  "da\xF1oVenenoPorTurno": 0
+  turnosConReduccion: 0
+  "reduccionDa\xF1o": 0
 --- !u!1 &2822598851099433823
 GameObject:
   m_ObjectHideFlags: 0
