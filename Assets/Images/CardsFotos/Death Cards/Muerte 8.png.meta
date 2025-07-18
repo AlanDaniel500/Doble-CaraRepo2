@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8ce32b6503c3b1142a02c584e47165df
+guid: 315a600b9769f514698541c158a7e04f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4945878254094509006
-    second: MuerteModificada7_0
+      213: -4820960534605210608
+    second: Muerte 8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MuerteModificada7_0
+      name: Muerte 8_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec3e1a5511a43a440800000000000000
-      internalID: 4945878254094509006
+      spriteID: 01cdda2bfe1881db0800000000000000
+      internalID: -4820960534605210608
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MuerteModificada7_0: 4945878254094509006
+      Muerte 8_0: -4820960534605210608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

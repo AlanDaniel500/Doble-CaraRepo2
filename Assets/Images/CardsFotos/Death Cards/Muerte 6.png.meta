@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c0f6b039e03f23a48b3a991b44c1fde9
+guid: d73c3822da77917418702d9d9dd1ae49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5676895610245459995
-    second: LuzModificada3_0
+      213: 8911650733454329095
+    second: Muerte 6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LuzModificada3_0
+      name: Muerte 6_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
+        y: 0
         width: 336
-        height: 509
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ef485c158d9731b0800000000000000
-      internalID: -5676895610245459995
+      spriteID: 70505e9402b8cab70800000000000000
+      internalID: 8911650733454329095
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LuzModificada3_0: -5676895610245459995
+      Muerte 6_0: 8911650733454329095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

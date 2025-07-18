@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c94e16c3b4451434d831f1a5c1d73b50
+guid: a8b4bbda08176904c8fb9c83c5092d81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6987527453517257842
-    second: LuzModificada5_0
+      213: -5943743521708412756
+    second: Luz 5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LuzModificada5_0
+      name: Luz 5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8360d27dc0570f90800000000000000
-      internalID: -6987527453517257842
+      spriteID: ca07a8022c4938da0800000000000000
+      internalID: -5943743521708412756
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LuzModificada5_0: -6987527453517257842
+      Luz 5_0: -5943743521708412756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Light Card 2
   m_EditorClassIdentifier: 
   cardName: Light card
-  cardImage: {fileID: 6012924941910738221, guid: 748092ef01683384db717749ff2938f6, type: 3}
+  cardImage: {fileID: 7537411786258477724, guid: 95772320d32fbe94787d2ceadbbd0787, type: 3}
   cardType: 0
   cardNumber: 2
   damage: 2
