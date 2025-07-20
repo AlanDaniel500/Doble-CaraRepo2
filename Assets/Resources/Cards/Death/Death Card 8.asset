@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Death Card 8
   m_EditorClassIdentifier: 
   cardName: Dark card
-  cardImage: {fileID: 3507790195793564992, guid: 9e659d8caa274cb4cb7fd2b05cd1a778, type: 3}
+  cardImage: {fileID: -4820960534605210608, guid: 315a600b9769f514698541c158a7e04f, type: 3}
   cardType: 2
   cardNumber: 8
   damage: 8
