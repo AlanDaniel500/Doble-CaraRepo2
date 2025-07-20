@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beta 1.0
+  m_text: Beta 1.1.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20c4f0ec68a297440ae0e35b288009d4, type: 2}
   m_sharedMaterial: {fileID: 5945253470663178490, guid: 20c4f0ec68a297440ae0e35b288009d4, type: 2}
@@ -3668,7 +3668,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3803942896095967126, guid: 0626e64edacedd44d9ec0d5ae3c92dc1, type: 3}
+  m_Sprite: {fileID: 7861047514435933715, guid: 2fb48c0ffe026f442bdc138364f3dfe3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
