@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f44f336310edb554aaf2341ac91c2396
+guid: f6a5f70d51297524e9305b0a0932144d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5411974266362640989
-    second: HUD DEFINITIVO_0
+      213: -560761466973177438
+    second: ParteAtrasCarta_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD DEFINITIVO_0
+      name: ParteAtrasCarta_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 39
-        width: 2431
-        height: 1212
+        x: 8
+        y: 1
+        width: 324
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a546ef141ec4e4b0800000000000000
-      internalID: -5411974266362640989
+      spriteID: 2a93655ba66c738f0800000000000000
+      internalID: -560761466973177438
       vertices: []
       indices: 
       edges: []
