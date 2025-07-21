@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using CardSystem;
+using System.Collections;
 
 public class ComboButtonTester : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ComboButtonTester : MonoBehaviour
     [SerializeField] private ManagerCombos managerCombos;
     [SerializeField] private EnemyController enemyController; // Ahora manejamos todo acá
     [SerializeField] private ComboUIManager comboUIManager;
+    [SerializeField] private Animator playButtonAnimator;
+
 
     public void OnComboPressed()
     {
@@ -37,6 +40,13 @@ public class ComboButtonTester : MonoBehaviour
             Debug.LogWarning("No se encontró ningún combo válido");
             return;
         }
+
+        if (playButtonAnimator != null)
+        {
+            playButtonAnimator.SetTrigger("Pressed");
+        }
+
+
 
         ICombo comboActivo = managerCombos.RevisarMejorCombo(cartasSeleccionadas);
 
