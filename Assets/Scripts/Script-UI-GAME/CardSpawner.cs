@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class CardSpawner : MonoBehaviour
 {
     public string cardDataFolder = "Cards";
-    public int cartasIniciales = 8;
+    public int cartasIniciales = 7;
 
     [Tooltip("Posiciones donde se mostrarán las cartas (editable en inspector)")]
     public List<Vector3> posicionesCartas = new List<Vector3>();
@@ -15,10 +15,10 @@ public class CardSpawner : MonoBehaviour
     private void Start()
     {
         // Si no definiste las posiciones en inspector, crea 8 por defecto
-        if (posicionesCartas == null || posicionesCartas.Count < 8)
+        if (posicionesCartas == null || posicionesCartas.Count < 7)
         {
             posicionesCartas = new List<Vector3>();
-            float startX = -10.03f;
+            float startX = -17.2443f;
             float y = -7.82f;
             float offsetX = 2f;
 
@@ -53,6 +53,9 @@ public class CardSpawner : MonoBehaviour
         GameObject cartaGO = new GameObject("Carta_" + data.cardName);
         cartaGO.transform.position = posicion;
 
+        //Cambiar escala del sprite
+        cartaGO.transform.localScale = new Vector3(0.7898855f, 0.9101233f, 0f);
+
         var sr = cartaGO.AddComponent<SpriteRenderer>();
         sr.sprite = data.cardImage;
 
@@ -65,6 +68,7 @@ public class CardSpawner : MonoBehaviour
 
         cartasEnJuego.Add(cartaGO);
     }
+
 
     int ObtenerIndiceLibre()
     {
