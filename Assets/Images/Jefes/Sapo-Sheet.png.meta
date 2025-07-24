@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -136,10 +136,10 @@ TextureImporter:
       name: Sapo-Sheet_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 136
-        width: 430
-        height: 681
+        x: 0
+        y: 138
+        width: 487
+        height: 705
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,10 +158,10 @@ TextureImporter:
       name: Sapo-Sheet_1
       rect:
         serializedVersion: 2
-        x: 519
-        y: 136
-        width: 430
-        height: 681
+        x: 487
+        y: 138
+        width: 487
+        height: 705
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +180,10 @@ TextureImporter:
       name: Sapo-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1003
-        y: 136
-        width: 430
-        height: 681
+        x: 974
+        y: 138
+        width: 487
+        height: 705
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: Sapo-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 136
-        width: 430
-        height: 681
+        x: 1461
+        y: 138
+        width: 487
+        height: 705
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Sapo-Sheet_4
       rect:
         serializedVersion: 2
-        x: 1971
-        y: 136
-        width: 430
-        height: 681
+        x: 1948
+        y: 138
+        width: 487
+        height: 705
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,165 +242,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 2455
-        y: 136
-        width: 430
-        height: 681
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1dfc50dfb5e53b080800000000000000
-      internalID: -9172884266843516975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27b8b207023fbde20800000000000000
-      internalID: 3376559666290723698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 559
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 423e157ef9c5ecf20800000000000000
-      internalID: 3444792606835467044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1043
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a66a34c3400871250800000000000000
-      internalID: 5915337391253726826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 1527
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8aa58f7c4f8317760800000000000000
-      internalID: 7453801482252999336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 2011
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43bcea36e077f3150800000000000000
-      internalID: 5854528944290581300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 2495
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e9e478b7202585e0800000000000000
-      internalID: -1908083512151053847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 251a6eb3894a3b244b930451490cde75
     internalID: 0
     vertices: []
     indices: 
@@ -409,7 +255,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sapo-Sheet_0: 6435758229901585646
+      Sapo-Sheet_1: 1108207088347537438
+      Sapo-Sheet_2: 5042925087289135854
+      Sapo-Sheet_3: 7188825005312467592
+      Sapo-Sheet_4: -4864697282540408111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

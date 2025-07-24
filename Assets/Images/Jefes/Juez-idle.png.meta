@@ -1,43 +1,28 @@
 fileFormatVersion: 2
-guid: fbd66d9241188914d996a67ef8a162c2
+guid: 353622445b353dc4a83fd45a17631a23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4143016586658989068
-    second: Sapo-Sheet 1_0
+      213: -1931704822159663205
+    second: Juez-idle_0
   - first:
-      213: -3620116629162600416
-    second: Sapo-Sheet 1_1
+      213: -8757345596911279208
+    second: Juez-idle_1
   - first:
-      213: 8759157622890941922
-    second: Sapo-Sheet 1_2
+      213: -3204925580833095292
+    second: Juez-idle_2
   - first:
-      213: 99712246047490298
-    second: Sapo-Sheet 1_3
+      213: -8385294697367262176
+    second: Juez-idle_3
   - first:
-      213: -3707064536467171212
-    second: Sapo-Sheet 1_4
+      213: -7247520124119920494
+    second: Juez-idle_4
   - first:
-      213: -6945562107172007989
-    second: Sapo-Sheet 1_5
+      213: -8126757437215903765
+    second: Juez-idle_5
   - first:
-      213: 2301156719262898279
-    second: Sapo-Sheet 1_6
-  - first:
-      213: 2206720755176681221
-    second: Sapo-Sheet 1_7
-  - first:
-      213: -5985069225535100316
-    second: Sapo-Sheet 1_8
-  - first:
-      213: 317111407477318019
-    second: Sapo-Sheet 1_9
-  - first:
-      213: -6714094476193597559
-    second: Sapo-Sheet 1_10
-  - first:
-      213: 5746919126343792485
-    second: Sapo-Sheet 1_11
+      213: -6496022507334964983
+    second: Juez-idle_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -133,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sapo-Sheet 1_0
+      name: Juez-idle_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 136
-        width: 430
-        height: 681
+        x: 0
+        y: 773
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c044c5a82a3fe7930800000000000000
-      internalID: 4143016586658989068
+      spriteID: b9f9348e2b43135e0800000000000000
+      internalID: -1931704822159663205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_1
+      name: Juez-idle_1
       rect:
         serializedVersion: 2
-        x: 519
-        y: 136
-        width: 430
-        height: 681
+        x: 580
+        y: 773
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02857412b13c2cdc0800000000000000
-      internalID: -3620116629162600416
+      spriteID: 893a5c8f398a77680800000000000000
+      internalID: -8757345596911279208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_2
+      name: Juez-idle_2
       rect:
         serializedVersion: 2
-        x: 1003
-        y: 136
-        width: 430
-        height: 681
+        x: 1160
+        y: 773
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2edc1143377ce8970800000000000000
-      internalID: 8759157622890941922
+      spriteID: 48181e62a21d583d0800000000000000
+      internalID: -3204925580833095292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_3
+      name: Juez-idle_3
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 136
-        width: 430
-        height: 681
+        x: 1740
+        y: 773
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af0ca6d62cf326100800000000000000
-      internalID: 99712246047490298
+      spriteID: 02c257266e271ab80800000000000000
+      internalID: -8385294697367262176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_4
+      name: Juez-idle_4
       rect:
         serializedVersion: 2
-        x: 1971
-        y: 136
-        width: 430
-        height: 681
+        x: 0
+        y: 0
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4781d68e17cdd8cc0800000000000000
-      internalID: -3707064536467171212
+      spriteID: 290565b98d2ab6b90800000000000000
+      internalID: -7247520124119920494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_5
+      name: Juez-idle_5
       rect:
         serializedVersion: 2
-        x: 2455
-        y: 136
-        width: 430
-        height: 681
+        x: 580
+        y: 0
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bcf499c00186c9f90800000000000000
-      internalID: -6945562107172007989
+      spriteID: bef6bf21b25f73f80800000000000000
+      internalID: -8126757437215903765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_6
+      name: Juez-idle_6
       rect:
         serializedVersion: 2
-        x: 75
-        y: 26
-        width: 6
-        height: 7
+        x: 1160
+        y: 0
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,118 +265,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7681b2818d95fef10800000000000000
-      internalID: 2301156719262898279
+      spriteID: 9096b5d62fd79d5a0800000000000000
+      internalID: -6496022507334964983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sapo-Sheet 1_7
+      name: Juez-idle_7
       rect:
         serializedVersion: 2
-        x: 559
-        y: 26
-        width: 6
-        height: 7
+        x: 1740
+        y: 0
+        width: 580
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 50fa9cac5d8df9e10800000000000000
-      internalID: 2206720755176681221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet 1_8
-      rect:
-        serializedVersion: 2
-        x: 1043
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46aabd7ef33c0fca0800000000000000
-      internalID: -5985069225535100316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet 1_9
-      rect:
-        serializedVersion: 2
-        x: 1527
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 381e8ec152b966400800000000000000
-      internalID: 317111407477318019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet 1_10
-      rect:
-        serializedVersion: 2
-        x: 2011
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 987711e85aeb2d2a0800000000000000
-      internalID: -6714094476193597559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sapo-Sheet 1_11
-      rect:
-        serializedVersion: 2
-        x: 2495
-        y: 26
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 567be963f7821cf40800000000000000
-      internalID: 5746919126343792485
+      spriteID: 3358fbfac8375c44ba9ce100197c0fc0
+      internalID: 1960011765
       vertices: []
       indices: 
       edges: []
@@ -400,7 +297,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ec72fc92dba783946b7692e78cb3cf4b
     internalID: 0
     vertices: []
     indices: 
@@ -409,7 +306,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Juez-idle_0: -1931704822159663205
+      Juez-idle_1: -8757345596911279208
+      Juez-idle_2: -3204925580833095292
+      Juez-idle_3: -8385294697367262176
+      Juez-idle_4: -7247520124119920494
+      Juez-idle_5: -8126757437215903765
+      Juez-idle_6: -6496022507334964983
+      Juez-idle_7: 1960011765
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
