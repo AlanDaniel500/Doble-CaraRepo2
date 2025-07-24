@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: e6d83844ff84e614db175b5a8b368474
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 108575786545229614
+    second: Serpiente-Idle_0
+  - first:
+      213: -4908163412954923846
+    second: Serpiente-Idle_1
+  - first:
+      213: -852878350640055371
+    second: Serpiente-Idle_2
+  - first:
+      213: 5722551420224928580
+    second: Serpiente-Idle_3
+  - first:
+      213: 3935149869161952446
+    second: Serpiente-Idle_4
+  - first:
+      213: -1392563559667103951
+    second: Serpiente-Idle_5
+  - first:
+      213: -2728120923347772081
+    second: Serpiente-Idle_6
+  - first:
+      213: 8477758684263235635
+    second: Serpiente-Idle_7
+  - first:
+      213: 8663599156489089250
+    second: Serpiente-Idle_8
+  - first:
+      213: -3569473815243347205
+    second: Serpiente-Idle_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Serpiente-Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 806
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fac344a1db18100800000000000000
+      internalID: 108575786545229614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_1
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 806
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcb0476163b2ebb0800000000000000
+      internalID: -4908163412954923846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 806
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb7a79a8a7f924f0800000000000000
+      internalID: -852878350640055371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 806
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bf96382369a6f40800000000000000
+      internalID: 5722551420224928580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 806
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4b259e4f57c9630800000000000000
+      internalID: 3935149869161952446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13783e212de9cace0800000000000000
+      internalID: -1392563559667103951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_6
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 66
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d9b837974c32ad0800000000000000
+      internalID: -2728120923347772081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 66
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3304ef23b9c07a570800000000000000
+      internalID: 8477758684263235635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 66
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0f7e6f7894b3870800000000000000
+      internalID: 8663599156489089250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Serpiente-Idle_9
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 66
+        width: 563
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfaac571a7ea67ec0800000000000000
+      internalID: -3569473815243347205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8d65b67ff34c8ce45b179479b9f4d593
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Serpiente-Idle_0: 108575786545229614
+      Serpiente-Idle_1: -4908163412954923846
+      Serpiente-Idle_2: -852878350640055371
+      Serpiente-Idle_3: 5722551420224928580
+      Serpiente-Idle_4: 3935149869161952446
+      Serpiente-Idle_5: -1392563559667103951
+      Serpiente-Idle_6: -2728120923347772081
+      Serpiente-Idle_7: 8477758684263235635
+      Serpiente-Idle_8: 8663599156489089250
+      Serpiente-Idle_9: -3569473815243347205
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
