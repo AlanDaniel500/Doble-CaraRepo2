@@ -441,6 +441,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c538b1a3871f39443b863cf2f8789ac1, type: 3}
   - name: Pandemonio
     clip: {fileID: 8300000, guid: af89e21872204bb4d8b8a5ef3c8a4f7a, type: 3}
+  - name: book closing
+    clip: {fileID: 8300000, guid: 3b574a632278b004f879214132664623, type: 3}
+  - name: book turn page
+    clip: {fileID: 8300000, guid: 1bc4449c7c0f3ad4fa55dc093fa22f84, type: 3}
   musicSource: {fileID: 911083811}
   sfxSource: {fileID: 1281162578}
 --- !u!1 &144981823

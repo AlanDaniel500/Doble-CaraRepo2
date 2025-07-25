@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titulo: Combo Riders
   descripcion: Combina cuatro cartas del mismo numero
-  imagen: {fileID: 0}
+  imagen: {fileID: 21300000, guid: aad630b426aa67b4bb073b4ea83bb010, type: 3}
   "da\xF1o": 40
   efectoExtra: 

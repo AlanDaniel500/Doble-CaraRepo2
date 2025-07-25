@@ -5739,6 +5739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsInfoPanel: {fileID: 1605916393}
   exitCardsInfoManager: {fileID: 1459080238}
+  bookSFX: {fileID: 8300000, guid: 1bc4449c7c0f3ad4fa55dc093fa22f84, type: 3}
   origen: 0
 --- !u!114 &1459080238
 MonoBehaviour:
@@ -5754,6 +5755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsInfoPanel: {fileID: 1605916393}
   menuPausaPanel: {fileID: 1980469110}
+  bookSFX: {fileID: 8300000, guid: 3b574a632278b004f879214132664623, type: 3}
   gameCanvasGroup: {fileID: 1540976314}
 --- !u!1 &1469502495
 GameObject:

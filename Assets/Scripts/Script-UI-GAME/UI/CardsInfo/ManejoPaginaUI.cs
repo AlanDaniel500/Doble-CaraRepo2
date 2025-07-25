@@ -26,6 +26,9 @@ public class ManejoPaginasUI : MonoBehaviour
     [SerializeField] private Button botonAnterior;
     [SerializeField] private Button botonSiguiente;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip turnPageSFX;
+
     private int indiceActual = 0;
 
     private void Start()
@@ -35,39 +38,49 @@ public class ManejoPaginasUI : MonoBehaviour
 
     public void PaginaSiguiente()
     {
+        ReproducirSFX();
+
         if (indiceActual + 2 < paginas.Count)
         {
             indiceActual += 2;
         }
         else
         {
-            // Si no hay más páginas adelante, volver al principio
             indiceActual = 0;
         }
+
         ActualizarPaginas();
     }
 
     public void PaginaAnterior()
     {
+        ReproducirSFX();
+
         if (indiceActual - 2 >= 0)
         {
             indiceActual -= 2;
         }
         else
         {
-            // Si ya estamos en la primera página, saltamos al final
             if (paginas.Count % 2 == 0)
-            {
-                // Última dupla si la cantidad es par
                 indiceActual = paginas.Count - 2;
-            }
             else
-            {
-                // Última página sola si es impar
                 indiceActual = paginas.Count - 1;
-            }
         }
+
         ActualizarPaginas();
+    }
+
+    private void ReproducirSFX()
+    {
+        if (turnPageSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("book turn page");
+        }
+        else
+        {
+            Debug.LogWarning("turnPageSFX no asignado o AudioManager no encontrado.");
+        }
     }
 
     private void ActualizarPaginas()

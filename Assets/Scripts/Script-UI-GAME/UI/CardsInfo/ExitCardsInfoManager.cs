@@ -6,6 +6,7 @@ public class ExitCardsInfoManager : MonoBehaviour
 
     [SerializeField] private GameObject cardsInfoPanel;
     [SerializeField] private GameObject menuPausaPanel;
+    [SerializeField] private AudioClip bookSFX;
 
     [SerializeField] private CanvasGroup gameCanvasGroup;
 
@@ -47,4 +48,17 @@ public class ExitCardsInfoManager : MonoBehaviour
             Time.timeScale = 1f; // Reanudar el juego
         }
     }
+
+    public void PlaySFX()
+    {
+        if (bookSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("book closing");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager");
+        }
+    }
+
 }
