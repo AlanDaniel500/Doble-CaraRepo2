@@ -16,5 +16,5 @@ MonoBehaviour:
   vidaEnemigo: 600
   "da\xF1oEnemigo": 60
   turnosParaAtacar: 3
-  spriteEnemigo: {fileID: 6714509266741839371, guid: 478d34e8c90239a49b8c3cdec2ebeb86, type: 3}
+  spriteEnemigo: {fileID: 108575786545229614, guid: e6d83844ff84e614db175b5a8b368474, type: 3}
   musicaDelNivel: {fileID: 8300000, guid: df242772a17dab649b99194abbabd4b6, type: 3}
