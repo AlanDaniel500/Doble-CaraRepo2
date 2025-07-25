@@ -1175,7 +1175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 654, y: -498}
+  m_AnchoredPosition: {x: 812, y: -498}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801269314
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beta 1.2.0
+  m_text: v1.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20c4f0ec68a297440ae0e35b288009d4, type: 2}
   m_sharedMaterial: {fileID: 5945253470663178490, guid: 20c4f0ec68a297440ae0e35b288009d4, type: 2}
@@ -3974,17 +3974,16 @@ MonoBehaviour:
   - text: 'Este es tu marcador de turnos. Si llega a 0, el enemigo te ataca. '
     videoClip: {fileID: 32900000, guid: 92d2639e42256874a9e223092ea77d3d, type: 3}
     loop: 1
-  - text: "Los n\xFAmeros en color verde indican la vida del enemigo Y los n\xFAmeros
-      en color rojo muestran el da\xF1o que hace el enemigo cuando te ataca. "
+  - text: "Hp es la vida, mientras que DMG es el da\xF1o que hace"
     videoClip: {fileID: 0}
-    loop: 0
+    loop: 1
   - text: "\xBFDudas sobre un combo? Haz clic en [Cards Info] para abrir el libro. "
     videoClip: {fileID: 0}
-    loop: 0
+    loop: 1
   - text: "Ahora est\xE1s listo para enfrentar los horrores de DunHellion. \xA1Combina,
       sobrevive y conquista el infierno! "
     videoClip: {fileID: 0}
-    loop: 0
+    loop: 1
   tutorialText: {fileID: 698322145}
   tutorialVideoPlayer: {fileID: 1456788563}
   videoPanel: {fileID: 1494855152}
