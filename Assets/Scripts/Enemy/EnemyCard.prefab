@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6805396640412727001}
   - component: {fileID: 8313435186092140378}
+  - component: {fileID: 8226670789755128901}
   m_Layer: 0
   m_Name: ReglasEnemigo
   m_TagString: Untagged
@@ -90,6 +91,28 @@ MonoBehaviour:
   "da\xF1oVenenoPorTurno": 0
   turnosConReduccion: 0
   "reduccionDa\xF1o": 0
+--- !u!95 &8226670789755128901
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037025872562605531}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2822598851099433823
 GameObject:
   m_ObjectHideFlags: 0
