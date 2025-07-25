@@ -7,6 +7,9 @@ public class ComboDobleRiders : MonoBehaviour, ICombo
     public string Nombre => "Doble Riders";
 
     [SerializeField] private int prioridad = 9;
+
+    [SerializeField] private AudioClip comboSFX;
+
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 90;
@@ -35,6 +38,18 @@ public class ComboDobleRiders : MonoBehaviour, ICombo
         }
 
         return cantidadPokers == 2;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Rider");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)

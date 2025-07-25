@@ -7,6 +7,8 @@ public class ComboBigPain : MonoBehaviour, ICombo, IComboConEfecto
     public string Nombre => "Gran Dolor";
 
     [SerializeField] private int prioridad = 6; // Editable desde el inspector
+
+    [SerializeField] private AudioClip comboSFX; 
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 75;
@@ -24,6 +26,18 @@ public class ComboBigPain : MonoBehaviour, ICombo, IComboConEfecto
         }
 
         return sangreCount >= 4;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Gran dolor");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)

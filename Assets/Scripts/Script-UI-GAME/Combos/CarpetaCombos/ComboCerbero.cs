@@ -7,6 +7,8 @@ public class ComboCerbero : MonoBehaviour, ICombo
     public string Nombre => "Cerbero";
     
     [SerializeField] private int prioridad = 6; // Editable desde inspector
+
+    [SerializeField] private AudioClip comboSFX; // Sonido del combo
     public int Prioridad => prioridad;
 
 
@@ -32,6 +34,18 @@ public class ComboCerbero : MonoBehaviour, ICombo
         }
 
         return false;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Cerebro");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)

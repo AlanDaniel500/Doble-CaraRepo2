@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
         float sfxVol = PlayerPrefs.GetFloat("SFXVolume", 1f);
 
         musicSource.volume = musicVol;
-        //sfxSource.volume = sfxVol;
+        sfxSource.volume = sfxVol;
 
         // Si no hay música aún, arrancar la correcta
         if (musicSource.clip == null)
@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    /*public void PlaySFX(string name)
+    public void PlaySFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
         if (s == null)
@@ -99,17 +99,17 @@ public class AudioManager : MonoBehaviour
         }
 
         sfxSource.PlayOneShot(s.clip);
-    }*/
+    }
 
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
     }
 
-    /*public void ToggleSFX()
+    public void ToggleSFX()
     {
         sfxSource.mute = !sfxSource.mute;
-    }*/
+    }
 
     public void SetMasterVolume(float value)
     {
@@ -122,12 +122,16 @@ public class AudioManager : MonoBehaviour
         musicSource.volume = value;
         PlayerPrefs.SetFloat("MusicVolume", value);
     }
+    public AudioSource GetSFXSource()
+    {
+        return sfxSource;
+    }
 
-    /*public void SetSFXVolume(float value)
+    public void SetSFXVolume(float value)
     {
         sfxSource.volume = value;
         PlayerPrefs.SetFloat("SFXVolume", value);
-    }*/
+    }
 
     private void OnEnable()
     {

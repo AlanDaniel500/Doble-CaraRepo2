@@ -9,6 +9,8 @@ public class ComboCaminoAlAbismo : MonoBehaviour, ICombo
     [SerializeField] private int prioridad = 10;
     public int Prioridad => prioridad;
 
+    [SerializeField] private AudioClip comboSFX;
+
     [SerializeField] private int dañoBase = 600;
 
     public bool CheckCombo(List<CardData> cartas)
@@ -55,6 +57,18 @@ public class ComboCaminoAlAbismo : MonoBehaviour, ICombo
         }
 
         return false;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Camino al abismo");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)

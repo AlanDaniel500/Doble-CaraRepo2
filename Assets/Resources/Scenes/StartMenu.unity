@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 6297587}
   - component: {fileID: 6297586}
   - component: {fileID: 6297589}
+  - component: {fileID: 6297590}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -265,7 +266,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1c2bcc40b5b2946b0cdad632919927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialCanvas: {fileID: 927762328}
+--- !u!114 &6297590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6297584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68c6ceaa789454bae5c8d10baad20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 481caafdd46c4b94ea99a1ce7717a436, type: 3}
+  clickSound: {fileID: 8300000, guid: 3e7b8bd3dc4462c48ab1da3805769b7e, type: 3}
 --- !u!1 &22934769
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,9 +408,41 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 18eb5fb49e12e034e9eebee23c7b42b3, type: 3}
   - name: BGM-LEVELS
     clip: {fileID: 8300000, guid: df242772a17dab649b99194abbabd4b6, type: 3}
-  sfxSounds: []
+  sfxSounds:
+  - name: Retro PickUp 18
+    clip: {fileID: 8300000, guid: 481caafdd46c4b94ea99a1ce7717a436, type: 3}
+  - name: Retro PickUp 10
+    clip: {fileID: 8300000, guid: 3e7b8bd3dc4462c48ab1da3805769b7e, type: 3}
+  - name: PlayerHit
+    clip: {fileID: 8300000, guid: 43774f0ad1fe5914c90844b339ed29de, type: 3}
+  - name: Abismo
+    clip: {fileID: 8300000, guid: 57685472cf06f8d4db159242cb0c6ab5, type: 3}
+  - name: Basico
+    clip: {fileID: 8300000, guid: 14dd6b567ddbc6e4cb7fe4c1958ad19d, type: 3}
+  - name: Camino al abismo
+    clip: {fileID: 8300000, guid: e2496b576ffdb4843b3bb6a1ee0ec46d, type: 3}
+  - name: Gran dolor
+    clip: {fileID: 8300000, guid: ad36130b6c1aae74ba8b63dd086621fc, type: 3}
+  - name: Defensa
+    clip: {fileID: 8300000, guid: 7d62fd7be4a8f1d42b0e258a35da9ee5, type: 3}
+  - name: Cerebro
+    clip: {fileID: 8300000, guid: edf4fddd9b754ee408a9e39dad006e37, type: 3}
+  - name: DemonioTrifecta
+    clip: {fileID: 8300000, guid: 733b3d9bf806de2439cfd6192291af7a, type: 3}
+  - name: Gemelos
+    clip: {fileID: 8300000, guid: 00f65e4e1f8d0af42807f31684bba7d7, type: 3}
+  - name: DemonioTrifecta
+    clip: {fileID: 8300000, guid: 733b3d9bf806de2439cfd6192291af7a, type: 3}
+  - name: Reino de las llamas
+    clip: {fileID: 8300000, guid: 7bdd61df757b83a47a22c738851587c7, type: 3}
+  - name: Roder
+    clip: {fileID: 8300000, guid: c5c688b9fd281c44489cedf37f1d4672, type: 3}
+  - name: Trio Gemelos
+    clip: {fileID: 8300000, guid: c538b1a3871f39443b863cf2f8789ac1, type: 3}
+  - name: Pandemonio
+    clip: {fileID: 8300000, guid: af89e21872204bb4d8b8a5ef3c8a4f7a, type: 3}
   musicSource: {fileID: 911083811}
-  sfxSource: {fileID: 0}
+  sfxSource: {fileID: 1281162578}
 --- !u!1 &144981823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,9 +1586,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 55575399}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: SetSFXVolume
+      - m_Target: {fileID: 323092957}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: SFXVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2573,6 +2619,7 @@ GameObject:
   - component: {fileID: 1245973369}
   - component: {fileID: 1245973368}
   - component: {fileID: 1245973367}
+  - component: {fileID: 1245973371}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -2706,6 +2753,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245973365}
   m_CullTransparentMesh: 1
+--- !u!114 &1245973371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245973365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68c6ceaa789454bae5c8d10baad20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 481caafdd46c4b94ea99a1ce7717a436, type: 3}
+  clickSound: {fileID: 8300000, guid: 3e7b8bd3dc4462c48ab1da3805769b7e, type: 3}
 --- !u!1 &1263252451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +2780,7 @@ GameObject:
   - component: {fileID: 1263252454}
   - component: {fileID: 1263252453}
   - component: {fileID: 1263252456}
+  - component: {fileID: 1263252457}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -2853,6 +2915,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsPanel: {fileID: 323092953}
+--- !u!114 &1263252457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263252451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68c6ceaa789454bae5c8d10baad20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 481caafdd46c4b94ea99a1ce7717a436, type: 3}
+  clickSound: {fileID: 8300000, guid: 3e7b8bd3dc4462c48ab1da3805769b7e, type: 3}
 --- !u!1 &1281162576
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +2938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281162577}
+  - component: {fileID: 1281162578}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -2884,6 +2961,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 55575397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1281162578
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281162576}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2727868876023831622, guid: da5358f6b4d8046479399cfd97ce01f1, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 481caafdd46c4b94ea99a1ce7717a436, type: 3}
+  m_Resource: {fileID: 8300000, guid: 481caafdd46c4b94ea99a1ce7717a436, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1283271110
 GameObject:
   m_ObjectHideFlags: 0

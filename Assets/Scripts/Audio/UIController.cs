@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public Slider Master_Slider,Music_Slider, SFX_Slider;
+    public Slider Master_Slider, Music_Slider, SFX_Slider;
 
     private void Start()
     {
@@ -14,7 +14,6 @@ public class UIController : MonoBehaviour
             AudioManager.Instance.SetMasterVolume(masterVol);
         }
 
-        // Ya ten�as esto:
         if (Music_Slider != null)
         {
             float musicVol = PlayerPrefs.GetFloat("MusicVolume", 1f);
@@ -30,7 +29,7 @@ public class UIController : MonoBehaviour
 
     public void ToggleSFX()
     {
-        //AudioManager.Instance.ToggleSFX();
+        AudioManager.Instance.ToggleSFX();
     }
 
     public void MasterVolume()
@@ -47,10 +46,10 @@ public class UIController : MonoBehaviour
         }
     }
 
-    /*public void SFXVolume()
+    public void SFXVolume()
     {
         if (SFX_Slider != null)
             AudioManager.Instance.SetSFXVolume(SFX_Slider.value);
-    }*/
+    }
 }
 

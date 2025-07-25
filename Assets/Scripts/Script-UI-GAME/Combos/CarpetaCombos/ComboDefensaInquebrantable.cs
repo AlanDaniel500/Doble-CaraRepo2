@@ -7,6 +7,8 @@ public class ComboDefensaInquebrantable : MonoBehaviour, ICombo, IComboConEfecto
     public string Nombre => "Defensa Inquebrantable";
 
     [SerializeField] private int prioridad = 6;
+
+    [SerializeField] private AudioClip comboSFX;
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 150;
@@ -24,6 +26,18 @@ public class ComboDefensaInquebrantable : MonoBehaviour, ICombo, IComboConEfecto
         }
 
         return luzCount >= 4;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Defensa");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)
