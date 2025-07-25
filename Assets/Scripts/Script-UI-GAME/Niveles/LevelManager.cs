@@ -29,7 +29,6 @@ public class LevelManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
-            Debug.Log("[LevelManager] Awake: Instancia creada.");
         }
         else
         {
@@ -44,40 +43,34 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"[LevelManager] Escena cargada: {scene.name}. Buscando EnemyController...");
-
         EnemyController enemy = FindFirstObjectByType<EnemyController>();
         if (enemy != null)
         {
             RegistrarEnemy(enemy);
-        }
-        else
-        {
-            Debug.LogWarning("[LevelManager] EnemyController no encontrado.");
         }
     }
 
     public void RegistrarEnemy(EnemyController enemy)
     {
         enemyActual = enemy;
-        Debug.Log("[LevelManager] Enemy registrado.");
 
         if (nivelActual >= 0 && nivelActual < niveles.Length)
         {
             NivelData datos = niveles[nivelActual];
 
+            // Pasamos el jefeID = nivelActual (puede ser cualquier entero que uses para animaciones)
             enemyActual.SetStats(
                 datos.vidaEnemigo,
                 datos.dañoEnemigo,
                 datos.turnosParaAtacar,
-                datos.spriteEnemigo,
-                datos.animadorEnemigo,
-                datos.nombreAnimacionIdle
+                nivelActual, // JefeID para animaciones
+                datos.spriteEnemigo
             );
-
-            Debug.Log($"[LevelManager] Stats enemigo aplicados para nivel {nivelActual + 1}.");
         }
     }
+
+    // El resto del código queda igual (IniciarNivelDesdeGuardado, SubirDeNivel, etc.)
+    // ...
 
     public IEnumerator IniciarNivelDesdeGuardado()
     {
@@ -85,7 +78,6 @@ public class LevelManager : MonoBehaviour
 
         if (gameResult == 0)
         {
-            Debug.Log("[LevelManager] Reiniciando a nivel 1 por derrota previa.");
             PlayerPrefs.SetInt(NivelKey, 1);
             PlayerPrefs.SetInt(GameResultKey, 1);
             PlayerPrefs.Save();
@@ -93,8 +85,6 @@ public class LevelManager : MonoBehaviour
 
         nivelActual = PlayerPrefs.GetInt(NivelKey, 1) - 1;
         nivelActual = Mathf.Clamp(nivelActual, 0, niveles.Length - 1);
-
-        Debug.Log($"[LevelManager] Nivel cargado desde guardado: {nivelActual + 1}");
 
         float tiempo = 0f;
         while (enemyActual == null && tiempo < 3f)
@@ -120,7 +110,7 @@ public class LevelManager : MonoBehaviour
         {
             nivelActual++;
             PlayerPrefs.SetInt(NivelKey, nivelActual + 1);
-            PlayerPrefs.SetInt(GameResultKey, 1); // Victoria
+            PlayerPrefs.SetInt(GameResultKey, 1);
             PlayerPrefs.Save();
 
             nivelCargando = true;
@@ -128,7 +118,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt(GameResultKey, 1); // Victoria final
+            PlayerPrefs.SetInt(GameResultKey, 1);
             PlayerPrefs.Save();
 
             nivelCargando = true;
@@ -152,15 +142,21 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[LevelManager] PantallaNivel no encontrada.");
             ComenzarNivel();
         }
     }
 
     public void ComenzarNivel()
     {
-        Debug.Log("[LevelManager] Nivel iniciado.");
+        // Aquí va lo que necesites al comenzar el nivel
     }
 
     public int GetNivelActual() => nivelActual + 1;
+
+    public NivelData GetNivelData()
+    {
+        if (nivelActual >= 0 && nivelActual < niveles.Length)
+            return niveles[nivelActual];
+        return null;
+    }
 }

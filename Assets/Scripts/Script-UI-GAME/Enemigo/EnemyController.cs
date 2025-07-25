@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
-[RequireComponent(typeof(Animator))]
 public class EnemyController : MonoBehaviour
 {
     [Header("Stats")]
@@ -17,9 +17,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoDaño;
     [SerializeField] private TextMeshProUGUI textoTurnos;
 
-    [Header("Visual")]
-    [SerializeField] private SpriteRenderer spriteRenderer;
-
     [Header("Delays para mostrar el 0 y ataque")]
     [SerializeField] private float delayAntesDeAtacar = 1f;
     [SerializeField] private float delayDespuesDeAtacar = 1f;
@@ -32,6 +29,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int turnosConReduccion = 0;
     [SerializeField] private int reduccionDaño = 0;
 
+    [Header("Referencias UI")]
+    [SerializeField] private Image enemyImageUI;
+
     private Animator animator;
     private PlayerHealthUI playerHealthUI;
     private bool estaActivo = false;
@@ -40,54 +40,57 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if (enemyImageUI == null)
+        {
+            Debug.LogWarning("[EnemyController] Image UI no asignada.");
+        }
+        else
+        {
+            animator = enemyImageUI.GetComponent<Animator>();
+            if (animator == null)
+                Debug.LogWarning("[EnemyController] Animator no encontrado en Image UI.");
+        }
     }
 
     private void Start()
     {
         playerHealthUI = FindFirstObjectByType<PlayerHealthUI>();
-        Debug.Log("[EnemyController] Start: PlayerHealthUI encontrado.");
-
         vidaActual = vidaMaxima;
         turnosRestantes = turnosParaAtacar;
         ActualizarUICompleta();
         estaActivo = true;
     }
 
-    public void SetStats(int nuevaVida, int nuevoDaño, int nuevosTurnos, Sprite nuevoSprite, RuntimeAnimatorController nuevoAnimador = null, string animacionIdle = "")
+    /// <summary>
+    /// Setea las estadísticas del enemigo y cambia la animación según el jefe actual.
+    /// </summary>
+    /// <param name="nuevaVida"></param>
+    /// <param name="nuevoDaño"></param>
+    /// <param name="nuevosTurnos"></param>
+    /// <param name="jefeID">ID para el parámetro Animator que decide la animación</param>
+    /// <param name="sprite">Sprite que se muestra en la UI</param>
+    public void SetStats(int nuevaVida, int nuevoDaño, int nuevosTurnos, int jefeID, Sprite sprite)
     {
-        Debug.Log($"[EnemyController] SetStats llamado: vida={nuevaVida}, daño={nuevoDaño}, turnos={nuevosTurnos}");
-
         vidaMaxima = nuevaVida;
         vidaActual = nuevaVida;
         daño = nuevoDaño;
         turnosParaAtacar = nuevosTurnos;
         turnosRestantes = nuevosTurnos;
 
-        if (spriteRenderer != null && nuevoSprite != null)
-        {
-            spriteRenderer.sprite = nuevoSprite;
-            Debug.Log("[EnemyController] Sprite actualizado.");
-        }
-
         if (animator != null)
         {
-            if (nuevoAnimador != null)
-            {
-                animator.runtimeAnimatorController = nuevoAnimador;
-                Debug.Log("[EnemyController] AnimatorController actualizado.");
-            }
+            animator.SetInteger("JefeID", jefeID);
+            Debug.Log($"[EnemyController] Parámetro JefeID seteado a {jefeID}.");
+        }
 
-            if (!string.IsNullOrEmpty(animacionIdle))
-            {
-                animator.Play(animacionIdle);
-                Debug.Log($"[EnemyController] Animación Idle '{animacionIdle}' reproducida.");
-            }
+        if (sprite != null && enemyImageUI != null)
+        {
+            enemyImageUI.sprite = sprite;
+            Debug.Log("[EnemyController] Sprite asignado correctamente.");
         }
 
         ActualizarUICompleta();
         estaActivo = true;
-        Debug.Log("[EnemyController] Enemigo activado con nuevos stats.");
     }
 
     public void OnPlayerTurnEnd()
@@ -96,25 +99,20 @@ public class EnemyController : MonoBehaviour
 
         if (turnosConVeneno > 0)
         {
-            Debug.Log($"[EnemyController] Veneno activo: {turnosConVeneno} turnos restantes. Aplicando {dañoVenenoPorTurno} daño.");
             AplicarDanoDesdeCombo(dañoVenenoPorTurno);
             turnosConVeneno--;
-
             if (turnosConVeneno <= 0)
             {
                 dañoVenenoPorTurno = 0;
-                Debug.Log("[EnemyController] Veneno ha terminado.");
             }
         }
 
         if (turnosConReduccion > 0)
         {
             turnosConReduccion--;
-
             if (turnosConReduccion <= 0)
             {
                 reduccionDaño = 0;
-                Debug.Log("[EnemyController] Reducción de daño (oscuridad) ha terminado.");
             }
         }
 
@@ -134,11 +132,8 @@ public class EnemyController : MonoBehaviour
     private IEnumerator TriggerEnemyActionConDelays()
     {
         yield return new WaitForSeconds(delayAntesDeAtacar);
-
         EjecutarAtaque();
-
         yield return new WaitForSeconds(delayDespuesDeAtacar);
-
         ResetTurnos();
     }
 
@@ -158,10 +153,7 @@ public class EnemyController : MonoBehaviour
         {
             dañoFinal -= reduccionDaño;
             if (dañoFinal < 0) dañoFinal = 0;
-            Debug.Log($"[EnemyController] Ataque reducido por oscuridad: {dañoFinal} (original: {daño})");
         }
-
-        Debug.Log("[EnemyController] ¡El enemigo ataca con daño final: " + dañoFinal + "!");
 
         if (playerHealthUI != null)
         {
@@ -183,22 +175,14 @@ public class EnemyController : MonoBehaviour
         vidaActual -= cantidad;
         if (vidaActual < 0) vidaActual = 0;
 
-        Debug.Log($"[EnemyController] Daño recibido: {cantidad}. Vida restante: {vidaActual}");
         ActualizarTextoVida();
 
         if (vidaActual == 0)
         {
-            Debug.Log("[EnemyController] ¡El enemigo ha sido derrotado!");
             estaActivo = false;
-
             if (LevelManager.Instance != null)
             {
-                Debug.Log("[EnemyController] Solicitando subir de nivel a LevelManager...");
                 LevelManager.Instance.SubirDeNivel();
-            }
-            else
-            {
-                Debug.LogWarning("[EnemyController] LevelManager.Instance es null al intentar subir de nivel.");
             }
         }
     }
@@ -209,8 +193,6 @@ public class EnemyController : MonoBehaviour
 
         dañoVenenoPorTurno = dañoPorTurno;
         turnosConVeneno = turnos;
-
-        Debug.Log($"[EnemyController] Aplicado veneno: {dañoPorTurno} daño por turno durante {turnos} turnos.");
     }
 
     public void AplicarDebuffDaño(int cantidad, int turnos)
@@ -219,8 +201,6 @@ public class EnemyController : MonoBehaviour
 
         reduccionDaño = cantidad;
         turnosConReduccion = turnos;
-
-        Debug.Log($"[EnemyController] Aplicada reducción de daño: -{cantidad} por {turnos} turnos.");
     }
 
     public void RetrasarProximoAtaque()
@@ -229,12 +209,12 @@ public class EnemyController : MonoBehaviour
 
         turnosRestantes++;
         ActualizarTextoTurnos();
-        Debug.Log("[EnemyController] Turno de ataque retrasado +1");
     }
 
     private void ActualizarTextoVida() => textoVida.text = vidaActual.ToString();
     private void ActualizarTextoDaño() => textoDaño.text = daño.ToString();
     private void ActualizarTextoTurnos() => textoTurnos.text = turnosRestantes.ToString();
+
     private void ActualizarUICompleta()
     {
         ActualizarTextoVida();

@@ -11,7 +11,6 @@ public class NivelData : ScriptableObject
     public Sprite spriteEnemigo;
     public AudioClip musicaDelNivel;
 
-    // NUEVO: Referencia al controlador o nombre de animación idle
-    public RuntimeAnimatorController animadorEnemigo; // OPCIÓN A
-    public string nombreAnimacionIdle;                // OPCIÓN B (por si no querés cambiar todo el controller)
+    // Ya no se necesita animador individual, es un solo animator controller
+    // public RuntimeAnimatorController animadorEnemigo;
 }
