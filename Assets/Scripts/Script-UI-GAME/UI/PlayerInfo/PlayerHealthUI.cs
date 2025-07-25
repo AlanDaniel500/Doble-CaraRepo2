@@ -63,6 +63,11 @@ public class PlayerHealthUI : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthUI();
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("PlayerHit");
+        }
     }
 
     public void Heal(int amount)

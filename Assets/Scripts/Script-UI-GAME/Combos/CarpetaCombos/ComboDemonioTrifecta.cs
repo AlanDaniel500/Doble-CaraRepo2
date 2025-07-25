@@ -7,6 +7,8 @@ public class ComboDemonioTrifecta : MonoBehaviour, ICombo
     public string Nombre => "Demonio Trifecta";
 
     [SerializeField] private int prioridad = 7;
+
+    [SerializeField] private AudioClip comboSFX;
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 50;
@@ -39,6 +41,17 @@ public class ComboDemonioTrifecta : MonoBehaviour, ICombo
         return tieneTrio && tienePar;
     }
 
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("DemonioTrifecta");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
+    }
     public int CalcularDaño(List<CardData> cartas)
     {
         int suma = 0;

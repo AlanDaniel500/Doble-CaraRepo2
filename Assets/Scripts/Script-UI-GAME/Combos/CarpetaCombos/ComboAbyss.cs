@@ -9,6 +9,8 @@ public class ComboAbyss : MonoBehaviour, ICombo, IComboConEfecto
     [SerializeField] private int prioridad = 6;
     public int Prioridad => prioridad;
 
+    [SerializeField] private AudioClip comboSFX; 
+
     [SerializeField] private int dañoBase = 250;
 
     [Header("Efecto Oscuridad")]
@@ -38,10 +40,23 @@ public class ComboAbyss : MonoBehaviour, ICombo, IComboConEfecto
         }
 
         int totalDaño = dañoBase + sumaValores;
-        Debug.Log($"Combo Abismo activado 🌑 Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
+        Debug.Log($"Combo Abismo activado Daño base: {dañoBase} + suma cartas: {sumaValores} = {totalDaño}");
 
         return totalDaño;
     }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Abismo");
+        }
+        else
+        {
+        Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
+    }
+
 
     public void AplicarEfecto(List<CardData> cartas, Player player)
     {

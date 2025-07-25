@@ -7,6 +7,9 @@ public class ComboPandemonium : MonoBehaviour, ICombo, IComboConEfecto
     public string Nombre => "Pandemonio";
 
     [SerializeField] private int prioridad = 6;
+
+    [SerializeField] private AudioClip comboSFX;
+
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 100;
@@ -25,6 +28,19 @@ public class ComboPandemonium : MonoBehaviour, ICombo, IComboConEfecto
 
         return muerteCount >= 4;
     }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Pandemonio");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
+    }
+
 
     public int CalcularDaño(List<CardData> cartas)
     {

@@ -7,6 +7,9 @@ public class ComboReinoDeLasLlamas : MonoBehaviour, ICombo
     public string Nombre => "Reino de las Llamas";
 
     [SerializeField] private int prioridad = 10;
+
+    [SerializeField] private AudioClip comboSFX;
+
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 700;
@@ -63,6 +66,18 @@ public class ComboReinoDeLasLlamas : MonoBehaviour, ICombo
         }
 
         return false;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Reino de las llamas");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)

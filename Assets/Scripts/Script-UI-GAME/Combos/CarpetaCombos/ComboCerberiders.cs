@@ -7,6 +7,8 @@ public class ComboCerberiders : MonoBehaviour, ICombo
     public string Nombre => "Cerberiders";
 
     [SerializeField] private int prioridad = 8;
+
+    [SerializeField] private AudioClip comboSFX;
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 80;
@@ -39,6 +41,19 @@ public class ComboCerberiders : MonoBehaviour, ICombo
 
         return tieneTrio && tienePoker;
     }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Rider");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
+    }
+
 
     public int CalcularDaño(List<CardData> cartas)
     {

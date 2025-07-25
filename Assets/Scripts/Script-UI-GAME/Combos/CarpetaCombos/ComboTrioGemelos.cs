@@ -7,6 +7,8 @@ public class ComboTrioGemelos : MonoBehaviour, ICombo
     public string Nombre => "Trío Gemelos";
 
     [SerializeField] private int prioridad = 7;
+
+    [SerializeField] private AudioClip comboSFX;
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 65;
@@ -34,6 +36,18 @@ public class ComboTrioGemelos : MonoBehaviour, ICombo
         }
 
         return pares == 3;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Trio Gemelos");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)
