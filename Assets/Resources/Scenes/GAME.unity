@@ -747,7 +747,11 @@ MonoBehaviour:
   paginas:
   - {fileID: 11400000, guid: d7f2a72ae79904c47a683ea8badd7558, type: 2}
   - {fileID: 11400000, guid: 51f55aba5a7f6d94ba40fb570840bd26, type: 2}
+  - {fileID: 11400000, guid: 6e583e322a966e440b964e7f897d62ad, type: 2}
+  - {fileID: 11400000, guid: d4904edc344e5c647a2170123d802bae, type: 2}
   - {fileID: 11400000, guid: d0981e9d97ea8ff41a49e10f3213a4ea, type: 2}
+  - {fileID: 11400000, guid: 87a79acde82be3046af740fe262823ce, type: 2}
+  - {fileID: 11400000, guid: ca49c035b89c9a148970a5d5d8e9b575, type: 2}
   - {fileID: 11400000, guid: 6177580a10913e74fbc5dc46ad95d02a, type: 2}
   - {fileID: 11400000, guid: fee89d46bdf8a1e4d84181c903f981f4, type: 2}
   - {fileID: 11400000, guid: dc0dfbb9ae4289a4c90b4e4f15425b4b, type: 2}
@@ -755,10 +759,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63a6d1cbd40b98a4699d163afdc3661e, type: 2}
   - {fileID: 11400000, guid: d8d5e36d5951e114fa82c82804047a1d, type: 2}
   - {fileID: 11400000, guid: bdcb034750eb6dc4daa304d7b22bd28b, type: 2}
-  - {fileID: 11400000, guid: 87a79acde82be3046af740fe262823ce, type: 2}
-  - {fileID: 11400000, guid: ca49c035b89c9a148970a5d5d8e9b575, type: 2}
   - {fileID: 11400000, guid: dc0dfbb9ae4289a4c90b4e4f15425b4b, type: 2}
-  - {fileID: 11400000, guid: d4904edc344e5c647a2170123d802bae, type: 2}
   - {fileID: 11400000, guid: 344175db6860e9f47ac0de2d50f23a2c, type: 2}
   - {fileID: 11400000, guid: 539ae73c77acebc499bb2974272c19aa, type: 2}
   tituloIzq: {fileID: 1919382368}
@@ -773,6 +774,7 @@ MonoBehaviour:
   efectoExtraDer: {fileID: 1637353769}
   botonAnterior: {fileID: 277553847}
   botonSiguiente: {fileID: 873778765}
+  turnPageSFX: {fileID: 8300000, guid: 1bc4449c7c0f3ad4fa55dc093fa22f84, type: 3}
 --- !u!1 &277553845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7362,7 +7364,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1821136065}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
