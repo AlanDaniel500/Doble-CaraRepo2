@@ -12,6 +12,7 @@ public class TutorialManager : MonoBehaviour
     {
         public string text;
         public VideoClip videoClip;
+        public bool loop; 
     }
 
     [Header("Referencias")]
@@ -50,6 +51,7 @@ public class TutorialManager : MonoBehaviour
         {
             videoPanel.SetActive(true);
             tutorialVideoPlayer.clip = step.videoClip;
+            tutorialVideoPlayer.isLooping = step.loop; 
             tutorialVideoPlayer.Play();
             tutorialVideoPlayer.loopPointReached += OnVideoFinished;
             nextButton.interactable = false; // No activo botón hasta que termine video
