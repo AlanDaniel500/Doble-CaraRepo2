@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41eef57cf6ac75f46b426472346f0d70
+guid: 38f2b8fe63c23d44f9d51f9ebfb4bfc5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6755086892809232455
-    second: Menu fondo_0
+      213: 7006414660087867214
+    second: Boton audio_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu fondo_0
+      name: Boton audio_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1
-        width: 204
-        height: 179
+        x: 0
+        y: 0
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 740aac03db3eebd50800000000000000
-      internalID: 6755086892809232455
+      spriteID: e4760a30309cb3160800000000000000
+      internalID: 7006414660087867214
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Menu fondo_0: 6755086892809232455
+      Boton audio_0: 7006414660087867214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
