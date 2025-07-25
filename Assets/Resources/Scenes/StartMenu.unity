@@ -414,7 +414,7 @@ MonoBehaviour:
   - name: Retro PickUp 10
     clip: {fileID: 8300000, guid: 3e7b8bd3dc4462c48ab1da3805769b7e, type: 3}
   - name: PlayerHit
-    clip: {fileID: 8300000, guid: 43774f0ad1fe5914c90844b339ed29de, type: 3}
+    clip: {fileID: 8300000, guid: fa3c5e14d6b44eb4b809332197bbe44f, type: 3}
   - name: Abismo
     clip: {fileID: 8300000, guid: 57685472cf06f8d4db159242cb0c6ab5, type: 3}
   - name: Basico
