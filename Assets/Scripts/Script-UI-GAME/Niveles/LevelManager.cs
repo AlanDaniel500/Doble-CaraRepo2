@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     [Header("Nombres de escena")]
     [SerializeField] private string escenaMejoras = "MejorasScene";
     [SerializeField] private string escenaCombate = "GAME";
-    [SerializeField] private string escenaFinal = "EndScreen";  // NUEVO
+    [SerializeField] private string escenaFinal = "EndScreen";
 
     private void Awake()
     {
@@ -34,7 +34,6 @@ public class LevelManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            return;
         }
     }
 
@@ -66,7 +65,16 @@ public class LevelManager : MonoBehaviour
         if (nivelActual >= 0 && nivelActual < niveles.Length)
         {
             NivelData datos = niveles[nivelActual];
-            enemyActual.SetStats(datos.vidaEnemigo, datos.dañoEnemigo, datos.turnosParaAtacar, datos.spriteEnemigo);
+
+            enemyActual.SetStats(
+                datos.vidaEnemigo,
+                datos.dañoEnemigo,
+                datos.turnosParaAtacar,
+                datos.spriteEnemigo,
+                datos.animadorEnemigo,
+                datos.nombreAnimacionIdle
+            );
+
             Debug.Log($"[LevelManager] Stats enemigo aplicados para nivel {nivelActual + 1}.");
         }
     }
@@ -106,11 +114,7 @@ public class LevelManager : MonoBehaviour
 
     public void SubirDeNivel()
     {
-        if (nivelCargando)
-        {
-            Debug.LogWarning("[LevelManager] Nivel ya en carga.");
-            return;
-        }
+        if (nivelCargando) return;
 
         if (nivelActual + 1 < niveles.Length)
         {
@@ -119,14 +123,11 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt(GameResultKey, 1); // Victoria
             PlayerPrefs.Save();
 
-            Debug.Log($"[LevelManager] Subiendo al nivel {nivelActual + 1} y cargando escena de mejoras...");
             nivelCargando = true;
-
             SceneManager.LoadScene(escenaMejoras);
         }
         else
         {
-            Debug.Log("[LevelManager] Último nivel completado. Cargando escena final.");
             PlayerPrefs.SetInt(GameResultKey, 1); // Victoria final
             PlayerPrefs.Save();
 
@@ -137,7 +138,6 @@ public class LevelManager : MonoBehaviour
 
     public void ContinuarCombate()
     {
-        Debug.Log("[LevelManager] Continuando al combate...");
         nivelCargando = false;
         SceneManager.LoadScene(escenaCombate);
     }

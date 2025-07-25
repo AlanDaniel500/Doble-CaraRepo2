@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
+[RequireComponent(typeof(Animator))]
 public class EnemyController : MonoBehaviour
 {
     [Header("Stats")]
@@ -31,24 +32,29 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int turnosConReduccion = 0;
     [SerializeField] private int reduccionDaño = 0;
 
+    private Animator animator;
     private PlayerHealthUI playerHealthUI;
     private bool estaActivo = false;
 
     public bool EstaActivo() => estaActivo;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
         playerHealthUI = FindFirstObjectByType<PlayerHealthUI>();
         Debug.Log("[EnemyController] Start: PlayerHealthUI encontrado.");
 
-        // Inicializar vida y UI
         vidaActual = vidaMaxima;
         turnosRestantes = turnosParaAtacar;
         ActualizarUICompleta();
         estaActivo = true;
     }
 
-    public void SetStats(int nuevaVida, int nuevoDaño, int nuevosTurnos, Sprite nuevoSprite)
+    public void SetStats(int nuevaVida, int nuevoDaño, int nuevosTurnos, Sprite nuevoSprite, RuntimeAnimatorController nuevoAnimador = null, string animacionIdle = "")
     {
         Debug.Log($"[EnemyController] SetStats llamado: vida={nuevaVida}, daño={nuevoDaño}, turnos={nuevosTurnos}");
 
@@ -64,8 +70,22 @@ public class EnemyController : MonoBehaviour
             Debug.Log("[EnemyController] Sprite actualizado.");
         }
 
-        ActualizarUICompleta();
+        if (animator != null)
+        {
+            if (nuevoAnimador != null)
+            {
+                animator.runtimeAnimatorController = nuevoAnimador;
+                Debug.Log("[EnemyController] AnimatorController actualizado.");
+            }
 
+            if (!string.IsNullOrEmpty(animacionIdle))
+            {
+                animator.Play(animacionIdle);
+                Debug.Log($"[EnemyController] Animación Idle '{animacionIdle}' reproducida.");
+            }
+        }
+
+        ActualizarUICompleta();
         estaActivo = true;
         Debug.Log("[EnemyController] Enemigo activado con nuevos stats.");
     }
@@ -74,7 +94,6 @@ public class EnemyController : MonoBehaviour
     {
         if (!estaActivo) return;
 
-        // Aplicar efecto veneno
         if (turnosConVeneno > 0)
         {
             Debug.Log($"[EnemyController] Veneno activo: {turnosConVeneno} turnos restantes. Aplicando {dañoVenenoPorTurno} daño.");
@@ -88,7 +107,6 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        // Reducir turnos de reducción de daño
         if (turnosConReduccion > 0)
         {
             turnosConReduccion--;
@@ -100,7 +118,6 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        // Disminuir contador de turnos para atacar
         turnosRestantes--;
 
         if (turnosRestantes <= 0)
@@ -215,24 +232,9 @@ public class EnemyController : MonoBehaviour
         Debug.Log("[EnemyController] Turno de ataque retrasado +1");
     }
 
-    private void ActualizarTextoVida()
-    {
-        if (textoVida != null)
-            textoVida.text = vidaActual.ToString();
-    }
-
-    private void ActualizarTextoDaño()
-    {
-        if (textoDaño != null)
-            textoDaño.text = daño.ToString();
-    }
-
-    private void ActualizarTextoTurnos()
-    {
-        if (textoTurnos != null)
-            textoTurnos.text = turnosRestantes.ToString();
-    }
-
+    private void ActualizarTextoVida() => textoVida.text = vidaActual.ToString();
+    private void ActualizarTextoDaño() => textoDaño.text = daño.ToString();
+    private void ActualizarTextoTurnos() => textoTurnos.text = turnosRestantes.ToString();
     private void ActualizarUICompleta()
     {
         ActualizarTextoVida();

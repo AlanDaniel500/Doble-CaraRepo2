@@ -1909,7 +1909,15 @@ PrefabInstance:
     - target: {fileID: 4666950463146442378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5dbd2879370088a4fb26379e472d3ec6, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226670789755128901, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226670789755128901, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
       propertyPath: textoTurnos
       value: 
@@ -1922,6 +1930,10 @@ PrefabInstance:
       propertyPath: "reduccionDa\xF1o"
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 763280272}
     - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
       propertyPath: turnosConVeneno
       value: 3
@@ -3097,6 +3109,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &763280272 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2899299680961316133, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+  m_PrefabInstance: {fileID: 479640453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &764712619
 GameObject:
   m_ObjectHideFlags: 0
