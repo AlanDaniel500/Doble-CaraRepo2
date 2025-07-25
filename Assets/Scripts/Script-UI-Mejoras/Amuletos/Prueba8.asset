@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 509cf0ee8501793488c6e0e1b7d17c6f, type: 3}
-  m_Name: Prueba1
+  m_Name: Prueba8
   m_EditorClassIdentifier: 
-  nombre: Amuleto Vitalidad
-  imagen: {fileID: -2838047234557678466, guid: 2e0a47f5fb7e194458cf581272d6e360, type: 3}
-  descripcion: Aumenta 150 de vida maxima.
-  aumentaVida: 1
-  cantidadAumentoVida: 150
+  nombre: Memoria del Dolor
+  imagen: {fileID: -2739493048225057332, guid: e1b8ce3a527ade44a9e2ae152b1010e9, type: 3}
+  descripcion: "Si repet\xEDs el mismo combo dos veces seguidas, el da\xF1o del segundo
+    se duplica."
+  aumentaVida: 0
+  cantidadAumentoVida: 0
   curarInstantaneo: 0
   cantidadCuraInstantanea: 0
   "da\xF1oAlProximoEnemigo": 0
