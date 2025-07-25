@@ -14,4 +14,4 @@ public class CardDisplay : MonoBehaviour
             cardImageUI.sprite = CardData.cardImage;
         }
     }
-}
+} 

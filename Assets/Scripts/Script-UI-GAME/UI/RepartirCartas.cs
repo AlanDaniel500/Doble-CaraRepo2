@@ -12,9 +12,9 @@ public class RepartirCartas : MonoBehaviour
             return;
         }
 
-        if (cardSpawner.CantidadCartasEnJuego() >= 8)
+        if (cardSpawner.CantidadCartasEnJuego() >= 7)
         {
-            Debug.Log("Ya tenés el máximo de 8 cartas.");
+            Debug.Log("Ya tenés el máximo de 7 cartas.");
             return;
         }
 

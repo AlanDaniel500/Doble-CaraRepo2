@@ -1,5 +1,6 @@
 using UnityEngine;
 using CardSystem;
+using System.Collections;
 using System.Collections.Generic;
 
 public class CardSpawner : MonoBehaviour
@@ -10,11 +11,17 @@ public class CardSpawner : MonoBehaviour
     [Tooltip("Posiciones donde se mostrarán las cartas (editable en inspector)")]
     public List<Vector3> posicionesCartas = new List<Vector3>();
 
+    [Header("Animación de Flip")]
+    [Tooltip("Sprite del dorso de la carta")]
+    public Sprite dorsoCarta;
+
+    [Tooltip("Tiempo antes de que la carta se dé vuelta")]
+    public float flipDelay = 0.5f;
+
     private List<GameObject> cartasEnJuego = new List<GameObject>();
 
     private void Start()
     {
-        // Si no definiste las posiciones en inspector, crea 8 por defecto
         if (posicionesCartas == null || posicionesCartas.Count < 7)
         {
             posicionesCartas = new List<Vector3>();
@@ -52,12 +59,10 @@ public class CardSpawner : MonoBehaviour
     {
         GameObject cartaGO = new GameObject("Carta_" + data.cardName);
         cartaGO.transform.position = posicion;
-
-        //Cambiar escala del sprite
         cartaGO.transform.localScale = new Vector3(0.7898855f, 0.9101233f, 0f);
 
         var sr = cartaGO.AddComponent<SpriteRenderer>();
-        sr.sprite = data.cardImage;
+        sr.sprite = dorsoCarta;
 
         cartaGO.AddComponent<BoxCollider2D>();
 
@@ -67,8 +72,16 @@ public class CardSpawner : MonoBehaviour
         cartaGO.AddComponent<CardSelector>();
 
         cartasEnJuego.Add(cartaGO);
+
+        // Cambiar sprite al frente después del delay
+        StartCoroutine(FlipCardAfterDelay(sr, data.cardImage));
     }
 
+    IEnumerator FlipCardAfterDelay(SpriteRenderer sr, Sprite spriteFinal)
+    {
+        yield return new WaitForSeconds(flipDelay);
+        sr.sprite = spriteFinal;
+    }
 
     int ObtenerIndiceLibre()
     {
@@ -146,7 +159,6 @@ public class CardSpawner : MonoBehaviour
         }
     }
 
-    // Método nuevo para obtener la lista de cartas seleccionadas con su CardData
     public List<CardData> ObtenerCartasSeleccionadas()
     {
         List<CardData> seleccionadas = new List<CardData>();

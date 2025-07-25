@@ -1,25 +1,27 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class CardSelector : MonoBehaviour
 {
     private bool isSelected = false;
     private Vector3 originalPosition;
+    private Vector3 originalScale;
     public float liftAmount = 0.3f;
 
-    // Contador estático para todas las cartas
+    // Config animación
+    public float hoverScaleMultiplier = 1.1f;
+    public float animationDuration = 0.2f;
+
     private static int cartasLevantadas = 0;
 
-    // Límite editable desde el Inspector (por ejemplo 8)
     [SerializeField] private int maxCartasPermitidas = 8;
-
-    // Necesitamos guardar una copia del límite para accederlo de forma estática
     private static int maxCartasLevantadas;
 
     private void Start()
     {
         originalPosition = transform.position;
+        originalScale = transform.localScale;
 
-        // Inicializamos el valor estático en el primer Start
         if (maxCartasLevantadas == 0)
         {
             maxCartasLevantadas = maxCartasPermitidas;
@@ -30,7 +32,6 @@ public class CardSelector : MonoBehaviour
     {
         if (!isSelected)
         {
-            // Solo levantar si no se superó el máximo
             if (cartasLevantadas < maxCartasLevantadas)
             {
                 transform.position = originalPosition + new Vector3(0, liftAmount, 0);
@@ -39,15 +40,30 @@ public class CardSelector : MonoBehaviour
             }
             else
             {
-                Debug.Log($"Ya hay {maxCartasLevantadas} cartas levantadas. Baja alguna antes de levantar otra.");
+                Debug.Log($"Ya hay {maxCartasLevantadas} cartas levantadas.");
             }
         }
         else
         {
-            // Bajar carta y descontar del contador
             transform.position = originalPosition;
             isSelected = false;
             cartasLevantadas--;
+        }
+    }
+
+    private void OnMouseEnter()
+    {
+        if (!isSelected)
+        {
+            transform.DOScale(originalScale * hoverScaleMultiplier, animationDuration).SetEase(Ease.OutBack);
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (!isSelected)
+        {
+            transform.DOScale(originalScale, animationDuration).SetEase(Ease.OutBack);
         }
     }
 
@@ -56,7 +72,6 @@ public class CardSelector : MonoBehaviour
         return isSelected;
     }
 
-    // Método estático para reiniciar el contador
     public static void ReiniciarContador()
     {
         cartasLevantadas = 0;
