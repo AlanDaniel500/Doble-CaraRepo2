@@ -9,6 +9,8 @@ public class ComboBasico : MonoBehaviour, ICombo
     [SerializeField] private int prioridad = 1; // Editable desde inspector
     public int Prioridad => prioridad;
 
+    [SerializeField] private AudioClip comboSFX;
+
     [SerializeField] private int dañoBase = 0; // Editable desde el Inspector
 
     public bool CheckCombo(List<CardData> cartas)
@@ -21,6 +23,18 @@ public class ComboBasico : MonoBehaviour, ICombo
         CardData cartaMayor = ObtenerCartaDeMayorValor(cartas);
         int dañoCarta = cartaMayor != null ? cartaMayor.cardNumber : 0;
         return dañoBase + dañoCarta;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Basico");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public CardData ObtenerCartaDeMayorValor(List<CardData> cartas)

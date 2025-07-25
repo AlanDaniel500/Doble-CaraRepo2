@@ -7,8 +7,10 @@ public class ComboRiders : MonoBehaviour, ICombo
     public string Nombre => "Riders";
     
     [SerializeField] private int prioridad = 4; // Editable desde inspector
-    public int Prioridad => prioridad;
 
+    [SerializeField] private AudioClip comboSFX;
+
+    public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 0; // Daño base configurable en el inspector
 
@@ -33,6 +35,19 @@ public class ComboRiders : MonoBehaviour, ICombo
 
         return false;
     }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Rider");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
+    }
+
 
     public int CalcularDaño(List<CardData> cartas)
     {

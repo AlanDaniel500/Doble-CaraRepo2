@@ -3755,6 +3755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 1
+  comboSFX: {fileID: 8300000, guid: 14dd6b567ddbc6e4cb7fe4c1958ad19d, type: 3}
   "da\xF1oBase": 10
 --- !u!114 &911191920
 MonoBehaviour:
@@ -3769,6 +3770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 2
+  comboSFX: {fileID: 8300000, guid: 00f65e4e1f8d0af42807f31684bba7d7, type: 3}
   "da\xF1oBase": 20
 --- !u!114 &911191921
 MonoBehaviour:
@@ -3783,6 +3785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 3
+  comboSFX: {fileID: 8300000, guid: edf4fddd9b754ee408a9e39dad006e37, type: 3}
   "da\xF1oBase": 30
 --- !u!114 &911191922
 MonoBehaviour:
@@ -3797,6 +3800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 4
+  comboSFX: {fileID: 8300000, guid: c5c688b9fd281c44489cedf37f1d4672, type: 3}
   "da\xF1oBase": 40
 --- !u!114 &911191923
 MonoBehaviour:
@@ -3811,6 +3815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 10
+  comboSFX: {fileID: 8300000, guid: 57685472cf06f8d4db159242cb0c6ab5, type: 3}
   "da\xF1oBase": 250
   "reduccionDa\xF1o": 30
   turnosDeDebuff: 2
@@ -3827,6 +3832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 10
+  comboSFX: {fileID: 8300000, guid: af89e21872204bb4d8b8a5ef3c8a4f7a, type: 3}
   "da\xF1oBase": 100
 --- !u!114 &911191925
 MonoBehaviour:
@@ -3841,6 +3847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 10
+  comboSFX: {fileID: 8300000, guid: ad36130b6c1aae74ba8b63dd086621fc, type: 3}
   "da\xF1oBase": 75
 --- !u!114 &911191926
 MonoBehaviour:
@@ -3855,6 +3862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 10
+  comboSFX: {fileID: 8300000, guid: 7d62fd7be4a8f1d42b0e258a35da9ee5, type: 3}
   "da\xF1oBase": 150
 --- !u!114 &911191927
 MonoBehaviour:
@@ -3869,6 +3877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 5
+  comboSFX: {fileID: 8300000, guid: 206a933c2aa9b7447b281dabc3453537, type: 3}
   "da\xF1oBase": 40
 --- !u!114 &911191929
 MonoBehaviour:
@@ -3883,6 +3892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 6
+  comboSFX: {fileID: 8300000, guid: 733b3d9bf806de2439cfd6192291af7a, type: 3}
   "da\xF1oBase": 50
 --- !u!114 &911191930
 MonoBehaviour:
@@ -3897,6 +3907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 7
+  comboSFX: {fileID: 8300000, guid: c538b1a3871f39443b863cf2f8789ac1, type: 3}
   "da\xF1oBase": 65
 --- !u!114 &911191931
 MonoBehaviour:
@@ -3911,6 +3922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 7
+  comboSFX: {fileID: 8300000, guid: edf4fddd9b754ee408a9e39dad006e37, type: 3}
   "da\xF1oBase": 60
 --- !u!114 &911191932
 MonoBehaviour:
@@ -3925,6 +3937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 11
+  comboSFX: {fileID: 8300000, guid: 7bdd61df757b83a47a22c738851587c7, type: 3}
   "da\xF1oBase": 1500
 --- !u!114 &911191933
 MonoBehaviour:
@@ -3939,6 +3952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 11
+  comboSFX: {fileID: 8300000, guid: e2496b576ffdb4843b3bb6a1ee0ec46d, type: 3}
   "da\xF1oBase": 900
 --- !u!114 &911191934
 MonoBehaviour:
@@ -3953,6 +3967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 9
+  comboSFX: {fileID: 8300000, guid: c5c688b9fd281c44489cedf37f1d4672, type: 3}
   "da\xF1oBase": 90
 --- !u!114 &911191935
 MonoBehaviour:
@@ -3967,6 +3982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prioridad: 8
+  comboSFX: {fileID: 8300000, guid: c5c688b9fd281c44489cedf37f1d4672, type: 3}
   "da\xF1oBase": 80
 --- !u!1 &937646623
 GameObject:

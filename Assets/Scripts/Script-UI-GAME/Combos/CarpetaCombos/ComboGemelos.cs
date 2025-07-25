@@ -7,6 +7,8 @@ public class ComboGemelos : MonoBehaviour, ICombo
     public string Nombre => "Gemelos";
     
     [SerializeField] private int prioridad = 2; // Editable desde inspector
+
+    [SerializeField] private AudioClip comboSFX;
     public int Prioridad => prioridad;
 
 
@@ -35,6 +37,19 @@ public class ComboGemelos : MonoBehaviour, ICombo
 
         return false;
     }
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Gemelos");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
+    }
+
+
 
     public int CalcularDaño(List<CardData> cartas)
     {

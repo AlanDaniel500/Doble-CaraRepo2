@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: accec49b40e32d447b8bd3d3b8cd72e7
+guid: 20312f13f3799434a8ba7e16706056fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1143004500601326359
-    second: LuzModificada7_0
+      213: -7337320236914995096
+    second: Luz 7_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LuzModificada7_0
+      name: Luz 7_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e43cfc667b3320f0800000000000000
-      internalID: -1143004500601326359
+      spriteID: 860956b8e1a9c2a90800000000000000
+      internalID: -7337320236914995096
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LuzModificada7_0: -1143004500601326359
+      Luz 7_0: -7337320236914995096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

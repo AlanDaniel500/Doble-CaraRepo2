@@ -7,6 +7,9 @@ public class ComboEcoGemelo : MonoBehaviour, ICombo
     public string Nombre => "Eco Gemelo";
 
     [SerializeField] private int prioridad = 6;
+
+    [SerializeField] private AudioClip comboSFX;
+
     public int Prioridad => prioridad;
 
     [SerializeField] private int dañoBase = 50;
@@ -32,6 +35,18 @@ public class ComboEcoGemelo : MonoBehaviour, ICombo
         }
 
         return cantidadPares >= 2;
+    }
+
+    public void PlaySFX()
+    {
+        if (comboSFX != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX("Eco Gemelos");
+        }
+        else
+        {
+            Debug.LogWarning("Falta el sonido o AudioManager para el combo: " + Nombre);
+        }
     }
 
     public int CalcularDaño(List<CardData> cartas)

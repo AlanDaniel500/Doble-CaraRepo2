@@ -42,6 +42,14 @@ public class ManagerCombos : MonoBehaviour
         {
             int daño = combo.CalcularDaño(cartas);
 
+            // Si el combo tiene sonido, lo reproduce
+            if (combo is MonoBehaviour behaviour)
+            {
+                var method = behaviour.GetType().GetMethod("PlaySFX");
+                if (method != null)
+                    method.Invoke(behaviour, null);
+            }
+
             // Verifica si tiene efecto especial y pasa player
             if (combo is IComboConEfecto comboConEfecto)
             {
@@ -53,6 +61,7 @@ public class ManagerCombos : MonoBehaviour
 
         return 0;
     }
+
 
     public void SetCartas(List<CardData> nuevasCartas)
     {
