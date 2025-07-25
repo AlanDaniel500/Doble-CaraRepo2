@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titulo: Combo Basico
   descripcion: "Combina 1 carta y hace el da\xF1o de la carta mas su da\xF1o base"
-  imagen: {fileID: 0}
+  imagen: {fileID: 5454352459914004326, guid: 1fe71ee533d3dc14588a7c048ea7e3c4, type: 3}
   "da\xF1o": 10
   efectoExtra: 

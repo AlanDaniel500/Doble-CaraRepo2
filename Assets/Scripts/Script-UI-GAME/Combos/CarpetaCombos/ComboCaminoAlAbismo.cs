@@ -15,7 +15,7 @@ public class ComboCaminoAlAbismo : MonoBehaviour, ICombo
 
     public bool CheckCombo(List<CardData> cartas)
     {
-        if (cartas == null || cartas.Count != 8)
+        if (cartas == null || cartas.Count != 7)
             return false;
 
         HashSet<int> numeros = new HashSet<int>();
@@ -26,24 +26,25 @@ public class ComboCaminoAlAbismo : MonoBehaviour, ICombo
         }
 
         // Si hay duplicados, no puede ser una escalera
-        if (numeros.Count != 8)
+        if (numeros.Count != 7)
             return false;
 
         List<int> listaOrdenada = new List<int>(numeros);
         listaOrdenada.Sort();
 
-        // Verificamos las tres escaleras válidas posibles
+        // Verificamos las posibles escaleras válidas de 7 números consecutivos
         int[][] escalerasValidas = new int[][]
         {
-            new int[] {1,2,3,4,5,6,7,8},
-            new int[] {2,3,4,5,6,7,8,9},
-            new int[] {3,4,5,6,7,8,9,10}
+            new int[] {1,2,3,4,5,6,7},
+            new int[] {2,3,4,5,6,7,8},
+            new int[] {3,4,5,6,7,8,9},
+            new int[] {4,5,6,7,8,9,10}
         };
 
         foreach (var escalera in escalerasValidas)
         {
             bool coincide = true;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 7; i++)
             {
                 if (listaOrdenada[i] != escalera[i])
                 {

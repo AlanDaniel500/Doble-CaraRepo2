@@ -84,7 +84,6 @@ MonoBehaviour:
   textoVida: {fileID: 4504198032592117656}
   "textoDa\xF1o": {fileID: 4122142879766176893}
   textoTurnos: {fileID: 0}
-  spriteRenderer: {fileID: 2899299680961316133}
   delayAntesDeAtacar: 1
   delayDespuesDeAtacar: 1
   turnosConVeneno: 0
@@ -225,7 +224,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3644442539667532999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -236,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
+  m_AnchoredPosition: {x: 0.000049591064, y: -200}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2610955683185109128

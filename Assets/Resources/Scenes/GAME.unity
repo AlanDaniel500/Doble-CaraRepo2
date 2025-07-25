@@ -1917,7 +1917,11 @@ PrefabInstance:
     - target: {fileID: 8226670789755128901, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 0ce959bb32cb04047bec27598ee318db, type: 2}
+    - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 967056744}
     - target: {fileID: 8313435186092140378, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
       propertyPath: textoTurnos
       value: 
@@ -1950,7 +1954,8 @@ PrefabInstance:
       propertyPath: delayDespuesDeAtacar
       value: 0.7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8226670789755128901, guid: 1c69d6c708524284ab9ffae78555b665, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
