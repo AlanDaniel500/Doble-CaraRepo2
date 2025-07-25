@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8622259438476403829, guid: 66ef8a760eba66d43aebd5c4122635ed, type: 3}
+  m_Sprite: {fileID: -6236345252653284969, guid: a92584560c8208145ae8fe583459b6a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2268,7 +2268,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -480}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 230.8538, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1109259140
 CanvasGroup:
@@ -3975,14 +3975,14 @@ MonoBehaviour:
     videoClip: {fileID: 32900000, guid: 92d2639e42256874a9e223092ea77d3d, type: 3}
     loop: 1
   - text: "Hp es la vida, mientras que DMG es el da\xF1o que hace"
-    videoClip: {fileID: 0}
+    videoClip: {fileID: 32900000, guid: 8ca2cab8c5c6f8d4c928c906d016be97, type: 3}
     loop: 1
   - text: "\xBFDudas sobre un combo? Haz clic en [Cards Info] para abrir el libro. "
-    videoClip: {fileID: 0}
+    videoClip: {fileID: 32900000, guid: 607d8c62972dac04fae7e2cccc6d9c11, type: 3}
     loop: 1
   - text: "Ahora est\xE1s listo para enfrentar los horrores de DunHellion. \xA1Combina,
       sobrevive y conquista el infierno! "
-    videoClip: {fileID: 0}
+    videoClip: {fileID: 32900000, guid: 9af9e42fa2bc4a243848b099cba8d345, type: 3}
     loop: 1
   tutorialText: {fileID: 698322145}
   tutorialVideoPlayer: {fileID: 1456788563}
