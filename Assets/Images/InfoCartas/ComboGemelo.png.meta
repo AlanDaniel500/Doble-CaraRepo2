@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ComboGemelo_0: 4092582662083893925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
